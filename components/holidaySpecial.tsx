@@ -54,7 +54,7 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
               CURATED FOR YOU !!!
             </h1>
             
-            <div className="border-t border-black w-3/4 mx-auto my-6"></div>
+            <div className="border-t border-black w-full mx-auto my-6"></div>
             
             <p className="text-gray-600 mb-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
