@@ -46,7 +46,7 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
   }, [tourId])
 
   return (
-    <div className="sticky top-2 space-y-2">
+    <div className=" top-2 space-y-2">
       {/* Price Card */}
       <div className="bg-white border rounded-lg p-4 shadow-sm">
         <div className="border rounded-md p-4">

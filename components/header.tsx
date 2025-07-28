@@ -16,7 +16,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen }: {
             src="/images/logo_new.png" 
             alt="GoSamyati Logo"
             className="h-10 w-auto object-contain ml-10 sm:ml-10"
-            style={{ transform: "scale(1.5)" }} // Adjusted scale for better visibility
+            style={{ transform: "scale(2.0)" }} // Adjusted scale for better visibility
           />
         </Link>
 

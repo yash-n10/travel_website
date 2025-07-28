@@ -167,8 +167,11 @@ function optionalString(value: unknown): string | undefined {
 
 function formatPrice(price: unknown): string {
   if (!price) return 'Price on request';
-  const numericValue = String(price).replace(/[^0-9.]/g, '');
-  return `₹${numericValue}`;
+  // const numericValue = String(price).replace(/[^0-9.]/g, '');
+  const numericValue=Number(price).toLocaleString('en-IN');
+  // return `₹${numericValue}`;
+  // const numericValue2=price.toLocaleString('en-IN', {style: 'currency',currency: 'INR',});
+  return `INR ${numericValue}`;
 }
 
 function processHighlights(highlights: unknown): string[] {
