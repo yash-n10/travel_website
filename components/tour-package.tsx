@@ -43,7 +43,7 @@ export function TourPackagesSection({
     }
 
     const packagesToShow = (error || !packages?.length) ? fallbackPackages : packages
-    
+   
     return packagesToShow.map((pkg) => {
       if (!pkg.id || !pkg.title) {
         console.warn(`Skipping tour package with missing ID or title`, pkg)
@@ -51,7 +51,7 @@ export function TourPackagesSection({
       }
       return (
         <Card key={pkg.id} className="overflow-hidden bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
-          <div className="relative h-60 sm:h-80 md:h-68">
+          <div className="relative h-50 sm:h-70 md:h-60">
             <Image 
               src={pkg.image1 || "/images/default-tour.jpg"} 
               alt={pkg.title || "Tour package"}
@@ -62,11 +62,14 @@ export function TourPackagesSection({
             />
           </div>
           <CardContent className="p-3 md:p-4 flex-grow flex flex-col">
-            {pkg.duration && (
+            {/* {pkg.duration && (
               <div className="text-xs text-gray-500 mb-1">
                 {pkg.duration}
               </div>
-            )}
+            )} */}
+            <div className="text-xs text-gray-500 mb-1">
+                {pkg.nights} Nights & {pkg.days} Days  
+            </div>
             <h3 className="font-bold text-red-600 mb-1 text-sm md:text-base leading-tight line-clamp-2 uppercase">
               {pkg.title}
             </h3>
