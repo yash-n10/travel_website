@@ -278,11 +278,11 @@ export default function GoSamyatiTravel() {
         setIsMobileMenuOpen={setIsMobileMenuOpen} 
       />
       
-      {/* <HeroSection 
+      <HeroSection 
         heroSlides={heroSlides}
         currentHeroSlide={currentHeroSlide}
         setCurrentHeroSlide={setCurrentHeroSlide}
-      /> */}
+      />
       
       <DestinationGrid />
       
