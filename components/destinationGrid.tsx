@@ -57,12 +57,12 @@ export function DestinationGrid() {
               </div>
             </Card>
           </Link>
-          <Link href={`/tours?country=Hong Kong`}>
+          <Link href={`/tours?country=Uttarakhand`}>
             <Card className="relative overflow-hidden rounded-lg h-[200px] group cursor-pointer">
-              <Image src="/images/hongKong.jpeg" alt="Hong Kong" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+              <Image src="/images/Uttarakhand1.jpg" alt="Uttarakhand" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
-                <h3 className="text-2xl font-semibold text-white">Hong Kong</h3>
+                <h3 className="text-2xl font-semibold text-white">Uttarakhand</h3>
               </div>
             </Card>
           </Link>
@@ -134,12 +134,12 @@ export function DestinationGrid() {
               </Card>
             </Link>
             {/* Hong Kong - bottom right */}
-            <Link href={`/tours?country=Hong Kong`} className="h-1/2">
+            <Link href={`/tours?country=Uttarakhand`} className="h-1/2">
               <Card className="relative overflow-hidden rounded-lg h-full group cursor-pointer">
-                <Image src="/images/hongKong.jpeg" alt="Hong Kong" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <Image src="/images/Uttarakhand1.jpg" alt="Uttarakhand" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-xl font-semibold text-white">Hong Kong</h3>
+                  <h3 className="text-xl font-semibold text-white">Uttarakhand</h3>
                 </div>
               </Card>
             </Link>
