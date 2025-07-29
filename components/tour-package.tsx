@@ -99,7 +99,11 @@ export function TourPackagesSection({
         <div className="flex justify-between items-center mb-4 sm:mb-6">
           
           {/* <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">{title}</h2> */}
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">{title}</h2>
+          {/* <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">{title}</h2> */}
+          <h2 className="text-xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">
+  {title}
+</h2>
+
           {!isLoading && (
             <Link 
               href="/tours" 
