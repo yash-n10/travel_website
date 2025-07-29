@@ -1,101 +1,106 @@
-"use client"
+"use client";
 
 export const dynamic = "force-dynamic";
 
-import { Suspense } from "react"
-import { useState, useEffect } from "react"
-import { useSearchParams } from "next/navigation"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
-import { ImageSlider } from "@/components/tour-details/image-slider"
-import { TourHighlights } from "@/components/tour-details/tour-highlights"
-import { Itinerary } from "@/components/tour-details/itineary"
-import { InclusionExclusion } from "@/components/tour-details/inclusion-exclusion"
-import { RelatedPackages } from "@/components/tour-details/relatedPackeges"
-import { PolicyAccordion } from "@/components/tour-details/Policy"
-import { BookingSidebar } from "@/components/tour-details/booking-sidebar"
-import { Footer } from "@/components/footer"
-import { TourRedirectButton } from "@/components/tour-redirect-button"
-import { fetchTourPackages } from "@/utils/api"
-import { TourPackage } from "@/types/index"
+import { Suspense } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
+import { ImageSlider } from "@/components/tour-details/image-slider";
+import { TourHighlights } from "@/components/tour-details/tour-highlights";
+import { Itinerary } from "@/components/tour-details/itineary";
+import { InclusionExclusion } from "@/components/tour-details/inclusion-exclusion";
+import { RelatedPackages } from "@/components/tour-details/relatedPackeges";
+import { PolicyAccordion } from "@/components/tour-details/Policy";
+import { BookingSidebar } from "@/components/tour-details/booking-sidebar";
+import { Footer } from "@/components/footer";
+import { TourRedirectButton } from "@/components/tour-redirect-button";
+import { fetchTourPackages } from "@/utils/api";
+import { TourPackage } from "@/types/index";
 import { TourPackagesSection } from "@/components/tour-package";
 
 export default function TourPageClient() {
-  const searchParams = useSearchParams()
-  const [tourPackage, setTourPackage] = useState<TourPackage | null>(null)
-  const [relatedPackages, setRelatedPackages] = useState<TourPackage[]>([])
-  const [selectedTourId, setSelectedTourId] = useState<string | number | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const tourId = searchParams.get("id")
-  const [packages, setPackages] = useState<TourPackage[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const searchParams = useSearchParams();
+  const [tourPackage, setTourPackage] = useState<TourPackage | null>(null);
+  const [relatedPackages, setRelatedPackages] = useState<TourPackage[]>([]);
+  const [selectedTourId, setSelectedTourId] = useState<string | number | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const tourId = searchParams.get("id");
+  const [packages, setPackages] = useState<TourPackage[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (!tourId) {
-      setLoading(false)
-      setError("Tour ID not specified")
-      return
+      setLoading(false);
+      setError("Tour ID not specified");
+      return;
     }
+
     async function loadTour() {
       try {
-    setLoading(true)
-    
-    // Ensure tourId exists before making the call
-    if (!tourId) {
-      setError("Tour ID not specified")
-      return
-    }
-        const packages = await fetchTourPackages(tourId)
+        setLoading(true);
+        const packages = await fetchTourPackages({ id: tourId });
+        console.log("Fetched packages:", packages);
         if (!packages || packages.length === 0) {
-          setError("Tour not found")
-          return
+          setError("Tour not found");
+          return;
         }
 
-        const foundPackage = packages[0]
-        setTourPackage(foundPackage)
+        // ✅ Dynamically find the correct package based on ID
+        const foundPackage =
+          typeof tourId === "string"
+            ? packages.find((pkg) => pkg.id.toString() === tourId)
+            : null;
 
-        // Load related packages
+        if (!foundPackage) {
+          setError("Tour not found with given ID");
+          return;
+        }
+
+        setTourPackage(foundPackage);
+
+        // Fetch related packages
         const related = await fetchTourPackages({
           category: foundPackage.category,
           exclude: foundPackage.id,
-          limit: 4
-        })
-        setRelatedPackages(related)
-
+          limit: 4,
+        });
+        setRelatedPackages(related);
       } catch (err) {
-        setError("Failed to load tour details")
-        console.error("Tour loading error:", err)
+        setError("Failed to load tour details");
+        console.error("Tour loading error:", err);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     }
 
-    loadTour()
-  }, [tourId])
+    loadTour();
+  }, [tourId]);
 
-    useEffect(() => {
+  useEffect(() => {
     const loadPackages = async () => {
       try {
         setIsLoading(true);
         setError(null);
-        
+
         const data = await fetchTourPackages({
           limit: 8,
-          category: 'International'
+          category: "International",
         });
-        
+
         const packageData = Array.isArray(data) ? data : [];
         setPackages(packageData);
-        
+
         if (packageData.length === 0) {
-          setError('No tour packages found');
+          setError("No tour packages found");
         }
       } catch (err) {
-        console.error('Failed to fetch packages:', err);
-        setError(err instanceof Error ? err.message : 'An unknown error occurred');
+        console.error("Failed to fetch packages:", err);
+        setError(err instanceof Error ? err.message : "An unknown error occurred");
         setPackages([]);
       } finally {
         setIsLoading(false);
@@ -105,9 +110,9 @@ export default function TourPageClient() {
     loadPackages();
   }, []);
 
-  const duration = tourPackage 
+  const duration = tourPackage
     ? `${tourPackage.days} Days & ${tourPackage.nights} Nights`
-    : ""
+    : "";
 
   if (loading) {
     return (
@@ -117,7 +122,7 @@ export default function TourPageClient() {
           <p className="text-gray-600">Loading tour details...</p>
         </div>
       </div>
-    )
+    );
   }
 
   if (error || !tourPackage) {
@@ -127,38 +132,35 @@ export default function TourPageClient() {
           <h2 className="text-xl font-bold text-red-600 mb-2">Tour Package Not Found</h2>
           <p className="text-gray-600 mb-4">{error || "The requested tour package could not be loaded."}</p>
           <Link href="/tours">
-            <Button className="bg-red-600 hover:bg-red-700 text-white">
-              Browse All Tours
-            </Button>
+            <Button className="bg-red-600 hover:bg-red-700 text-white">Browse All Tours</Button>
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className="min-h-screen bg-white relative">
-      <Header 
-        isMobileMenuOpen={isMobileMenuOpen} 
+      <Header
+        isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
       />
 
-      {/* Updated ImageSlider usage - now only needs tourId */}
       <ImageSlider tourId={tourId || ""} />
 
       <div className="container mx-auto px-4 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-3">
-
             <TourHighlights tourId={tourId || ""} />
 
+            {/* Optional Button & Enquiry */}
             {/* <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <TourRedirectButton
                 tourId={tourPackage.id}
                 tourTitle={tourPackage.title}
                 className="bg-red-600 hover:bg-red-700"
                 showIcon={true}
-                onTourSelect={setSelectedTourId} // Pass the setter function
+                onTourSelect={setSelectedTourId}
               />
               <Link href="/contact" prefetch={false}>
                 <Button
@@ -171,7 +173,10 @@ export default function TourPageClient() {
             </div> */}
 
             <Itinerary tourId={tourId || ""} />
-            <InclusionExclusion />
+            <InclusionExclusion
+              inclusion={tourPackage.inclusions ?? []}
+              exclusion={tourPackage.exclusions ?? []}
+            />
 
             <div className="mb-6">
               <h3 className="text-lg font-bold text-red-600 mb-3">KNOW BEFORE YOU GO</h3>
@@ -187,13 +192,13 @@ export default function TourPageClient() {
               </ul>
             </div>
 
-            <TourPackagesSection 
-                    title="Related" 
-                    packages={packages.slice(4, 8)}
-                    isLoading={isLoading}
-                    error={error}
-                    fallbackPackages={[]}
-                  />
+            <TourPackagesSection
+              title="Related"
+              packages={packages.slice(4, 8)}
+              isLoading={isLoading}
+              error={error}
+              fallbackPackages={[]}
+            />
             <PolicyAccordion />
           </div>
 
@@ -205,5 +210,5 @@ export default function TourPageClient() {
 
       <Footer />
     </div>
-  )
+  );
 }

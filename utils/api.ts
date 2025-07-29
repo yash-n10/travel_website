@@ -67,7 +67,6 @@ export async function fetchTourPackages(params: string | Record<string, any> = {
 
 // Helper function to process individual tour package
 function processTourPackage(item: any): TourPackage {
-  
   return {
     id: ensureNumber(item.id, 0),
     slug: ensureString(item.slug, 'untitled-tour'),
@@ -92,8 +91,14 @@ function processTourPackage(item: any): TourPackage {
     itinerary: item.iternary ? item.iternary.map((day: any) => ({
       day: ensureString(day.day, 'DAY 1'),
       title: ensureString(day.location, 'Untitled Day'),
-      content: ensureString(day.iternary_detail, 'No details available')
-    })) : []
+      content: ensureString(day.iternary_detail, 'No details available'),
+    })) : [],
+    inclusions: Array.isArray(item.inclusions || item.inclusion)
+        ? (item.inclusions || item.inclusion).map((inc: any) => ensureString(inc, 'Included'))
+    : [],
+    exclusions: Array.isArray(item.exclusions || item.exclusion)
+      ? (item.exclusions || item.exclusion).map((exc: any) => ensureString(exc, 'Not included'))
+    : [],
   };
 }
 
@@ -185,4 +190,31 @@ function processHighlights(highlights: unknown): string[] {
 
 function clampNumber(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
+}
+
+
+export async function fetchToursWithCookie(): Promise<any[]> {
+  try {
+    const url = 'https://ecomlancers.com/travel_website/Api/tours';
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Cookie': 'ci_session=90h805lb5j4gqbrgff96v6qji6k93tj6'
+      },
+      // optional caching options (can remove if unnecessary)
+      next: { revalidate: 3600 },
+      cache: 'force-cache'
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch tours. Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return Array.isArray(data) ? data : data?.data || [];
+
+  } catch (error) {
+    console.error('Error fetching tours with cookie:', error);
+    return [];
+  }
 }

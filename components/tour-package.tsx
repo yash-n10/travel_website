@@ -94,7 +94,7 @@ export function TourPackagesSection({
   }
 
   return (
-    <section className="py-12 sm:py-16 bg-white w-[90vw] mx-auto">
+    <section className="pt-10 pb-4 sm:pt-14 sm:pb-4 bg-white w-[90vw] mx-auto">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center mb-4 sm:mb-6" >
           

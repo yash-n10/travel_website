@@ -21,6 +21,8 @@ export type TourPackage = {
   groupSize: number;
   itinerary: ItineraryDay[];
   duration?: string;
+  inclusions?: string[];
+  exclusions?: string[];
    // Keeping basic_info as optional since it was in original
 };
 

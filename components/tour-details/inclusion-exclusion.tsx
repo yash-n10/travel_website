@@ -1,95 +1,82 @@
-"use client"
+"use client";
 
 import {
-  Bed, // hotel
-  Binoculars, // sightseeing
-  Bus, // transport
-  UtensilsCrossed, // meals
-  UserRoundSearch, // guide
-  BadgeCheck, // permits
-  ShieldCheck, // insurance
-  ReceiptText, // taxes
-  Activity, // activities
-  LifeBuoy, // support
-  Plane, // airfare
-  Shirt, // laundry
-  HandCoins, // tips
-  CupSoda, // beverage
-  ShoppingBag, // shopping
-  Puzzle, // add_on
-  Ticket, // entry_fees
-  Stethoscope, // medical
-  PlaneTakeoff, // air
-  Train, // train
-  Wallet, // personal_expense
-  StarHalf, // optional_activity
-  ShieldQuestion, // travel_insurance
-  Sandwich, // lunches
-  MapPin,
-  Car,
-  Utensils,
-  Clock
+  Bed, Binoculars, Bus, UtensilsCrossed, UserRoundSearch, BadgeCheck, ShieldCheck,
+  ReceiptText, Activity, LifeBuoy, Plane, Shirt, HandCoins, CupSoda, ShoppingBag,
+  Puzzle, Ticket, Stethoscope, Clock, PlaneTakeoff, Train, Wallet, StarHalf,
+  ShieldQuestion, Sandwich
 } from "lucide-react";
 
-export function InclusionExclusion() {
+const icons: Record<string, JSX.Element> = {
+  hotel: <Bed className="w-5 h-5 text-white" />,
+  sightseeing: <Binoculars className="w-5 h-5 text-white" />,
+  transport: <Bus className="w-5 h-5 text-white" />,
+  meals: <UtensilsCrossed className="w-5 h-5 text-white" />,
+  guide: <UserRoundSearch className="w-5 h-5 text-white" />,
+  permits: <BadgeCheck className="w-5 h-5 text-white" />,
+  insurance: <ShieldCheck className="w-5 h-5 text-white" />,
+  taxes: <ReceiptText className="w-5 h-5 text-white" />,
+  activities: <Activity className="w-5 h-5 text-white" />,
+  support: <LifeBuoy className="w-5 h-5 text-white" />,
+  airfare: <Plane className="w-5 h-5 text-white" />,
+  laundry: <Shirt className="w-5 h-5 text-white" />,
+  tips: <HandCoins className="w-5 h-5 text-white" />,
+  beverage: <CupSoda className="w-5 h-5 text-white" />,
+  shopping: <ShoppingBag className="w-5 h-5 text-white" />,
+  add_on: <Puzzle className="w-5 h-5 text-white" />,
+  entry_fees: <Ticket className="w-5 h-5 text-white" />,
+  medical: <Stethoscope className="w-5 h-5 text-white" />,
+  delays: <Clock className="w-5 h-5 text-white" />,
+  air: <PlaneTakeoff className="w-5 h-5 text-white" />,
+  train: <Train className="w-5 h-5 text-white" />,
+  personal_expense: <Wallet className="w-5 h-5 text-white" />,
+  optional_activity: <StarHalf className="w-5 h-5 text-white" />,
+  travel_insurance: <ShieldQuestion className="w-5 h-5 text-white" />,
+  lunches: <Sandwich className="w-5 h-5 text-white" />,
+};
+
+export function InclusionExclusion({
+  inclusion = [],
+  exclusion = [],
+}: {
+  inclusion: string[];
+  exclusion: string[];
+}) {
+  console.log(`Inclusion: ${JSON.stringify(inclusion)}`);
+  console.log(`Exclusion: ${JSON.stringify(exclusion)}`);
   return (
     <div className="mb-6">
+      {/* Inclusion Section */}
       <h3 className="text-lg font-bold text-red-600 mb-3">INCLUSION</h3>
-      <div className="flex flex-wrap gap-8 justify-start mb-6 flex justify-center">
-        {[
-          { icon: <Bed className="w-5 h-5 text-white" />, label: "Hotel" },
-          { icon: <Binoculars className="w-5 h-5 text-white" />, label: "Sightseeing" },
-          { icon: <Bus className="w-5 h-5 text-white" />, label: "Transport" },
-          { icon: <UtensilsCrossed className="w-5 h-5 text-white" />, label: "Meals" },
-          { icon: <UserRoundSearch className="w-5 h-5 text-white" />, label: "Guide" },
-          { icon: <BadgeCheck className="w-5 h-5 text-white" />, label: "Permits" },
-          { icon: <ShieldCheck className="w-5 h-5 text-white" />, label: "Insurance" },
-          { icon: <ReceiptText className="w-5 h-5 text-white" />, label: "Taxes" },
-          { icon: <Activity className="w-5 h-5 text-white" />, label: "Activities" },
-          { icon: <LifeBuoy className="w-5 h-5 text-white" />, label: "Support" },
-          { icon: <Plane className="w-5 h-5 text-white" />, label: "Airfare" },
-          { icon: <Shirt className="w-5 h-5 text-white" />, label: "Laundry" },
-          { icon: <HandCoins className="w-5 h-5 text-white" />, label: "Tips" },
-          { icon: <CupSoda className="w-5 h-5 text-white" />, label: "Beverage" },
-          { icon: <ShoppingBag className="w-5 h-5 text-white" />, label: "Shopping" },
-          { icon: <Puzzle className="w-5 h-5 text-white" />, label: "Add On" },
-          { icon: <Ticket className="w-5 h-5 text-white" />, label: "Entry Fees" },
-          { icon: <Stethoscope className="w-5 h-5 text-white" />, label: "Medical" },
-          { icon: <Clock className="w-5 h-5 text-white" />, label: "Delays" },
-          { icon: <PlaneTakeoff className="w-5 h-5 text-white" />, label: "Air" },
-          { icon: <Train className="w-5 h-5 text-white" />, label: "Train" },
-          { icon: <Wallet className="w-5 h-5 text-white" />, label: "Personal Expense" },
-          { icon: <StarHalf className="w-5 h-5 text-white" />, label: "Optional Activity" },
-          { icon: <ShieldQuestion className="w-5 h-5 text-white" />, label: "Travel Insurance" },
-          { icon: <Sandwich className="w-5 h-5 text-white" />, label: "Lunches" },
-        ].map((item, index) => (
-          <div key={`inclusion-${index}`} className="text-center">
-            <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
-              {item.icon}
+      <div className="flex flex-wrap gap-8 justify-center mb-6">
+        {inclusion.map((item, index) =>
+          icons[item] ? (
+            <div key={`inclusion-${index}`} className="text-center">
+              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                {icons[item]}
+              </div>
+              <span className="text-xs text-red-600 font-medium">{item.replace(/_/g, " ")}</span>
             </div>
-            <span className="text-xs text-red-600 font-medium">{item.label}</span>
-          </div>
-        ))}
+          ) : null
+        )}
       </div>
 
       <hr className="border-t-2 border-red-600 mb-6" />
 
+      {/* Exclusion Section */}
       <h3 className="text-lg font-bold text-red-600 mb-3">EXCLUSION</h3>
-      <div className="flex flex-wrap gap-40 justify-start flex justify-center">
-        {[
-          { icon: <Bed className="w-5 h-5 text-white" />, label: "Hotel" },
-          { icon: <MapPin className="w-5 h-5 text-white" />, label: "Sightseeing" },
-          { icon: <Car className="w-5 h-5 text-white" />, label: "Transport" },
-          { icon: <Utensils className="w-5 h-5 text-white" />, label: "Meals" }
-        ].map((item, index) => (
-          <div key={`exclusion-${index}`} className="text-center">
-            <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
-              {item.icon}
+      <div className="flex flex-wrap gap-8 justify-center">
+        {exclusion.map((item, index) =>
+          icons[item] ? (
+            <div key={`exclusion-${index}`} className="text-center">
+              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                {icons[item]}
+              </div>
+              <span className="text-xs text-red-600 font-medium">{item.replace(/_/g, " ")}</span>
             </div>
-            <span className="text-xs text-red-600 font-medium">{item.label}</span>
-          </div>
-        ))}
+          ) : null
+        )}
       </div>
     </div>
-  )
+  );
 }

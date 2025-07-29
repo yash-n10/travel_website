@@ -19,7 +19,7 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
   ] 
 }) => {
   return (
-    <div className={`bg-white max-w-6xl mx-auto overflow-hidden ${className}`}>
+  <div className={`bg-white pt-12 max-w-6xl mx-auto overflow-hidden ${className}`}>
       <div className="flex flex-col md:flex-row">
         {/* Image Slider - Left Side */}
         <div className="w-full md:w-1/2 br-4 md:br-none overflow-hidden">
@@ -47,14 +47,13 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
         {/* Text Content - Right Side */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
           <div className="space-y-8">
-            <h1 className="text-3xl font-bold uppercase tracking-tight">
+            <h1 className="text-3xl font-bold uppercase tracking-tight mb-0">
               BOOK A HOLIDAY, SPECIALLY
-            </h1>
-            <h1 className="text-3xl font-bold uppercase tracking-tight mb-6">
+              <br />
               CURATED FOR YOU !!!
             </h1>
             
-            <div className="border-t border-black w-full mx-auto my-6"></div>
+            <div className="border-t border-black w-full mx-auto my-4"></div>
             
             <p className="text-gray-600 mb-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
