@@ -182,29 +182,29 @@ const heroSlides: HeroSlide[] = [
   {
     image: "/images/heritage-hotel.webp",
     categories: [
-      { name: "Heritage", image: "/images/portlouis.jpeg" },
-      { name: "Culture", image: "/images/mauritius-beach.jpeg" },
+      { name: "Heritage", image: "/images/heritage-hotel.webp" },
+      { name: "Cities", image: "/images/portlouis.jpeg" },
+      { name: "Beach", image: "/images/mauritius-beach.jpeg" },
+
     ],
   },
+  {
+    image: "/images/portlouis.jpeg",
+    categories: [
+      { name: "Cities", image: "/images/portlouis.jpeg" },
+      { name: "Heritage", image: "/images/heritage-hotel.webp" },
+      { name: "Beach", image: "/images/mauritius-beach.jpeg" },
+
+    ],
+  },
+ 
   {
     image: "/images/mauritius-beach.jpeg",
     categories: [
       { name: "Beach", image: "/images/mauritius-beach.jpeg" },
       { name: "Cities", image: "/images/portlouis.jpeg" },
-    ],
-  },
-  {
-    image: "/images/heritage-hotel.webp",
-    categories: [
-      { name: "Heritage", image: "/images/portlouis.jpeg" },
-      { name: "Culture", image: "/images/mauritius-beach.jpeg" },
-    ],
-  },
-  {
-    image: "/images/mauritius-beach.jpeg",
-    categories: [
-      { name: "Beach", image: "/images/mauritius-beach.jpeg" },
-      { name: "Cities", image: "/images/portlouis.jpeg" },
+      { name: "Heritage", image: "/images/heritage-hotel.webp" },
+
     ],
   },
 ];

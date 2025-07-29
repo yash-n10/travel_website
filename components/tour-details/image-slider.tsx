@@ -147,7 +147,7 @@ export function ImageSlider({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}>
       
-      <div className="relative h-full w-full overflow-hidden rounded-lg">
+      <div className="relative h-full w-full overflow-hidden ">
         {/* Slides */}
         <div className="relative h-full w-full">
           {images.map((img, index) => (

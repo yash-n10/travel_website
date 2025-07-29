@@ -50,8 +50,8 @@ export function TourPackagesSection({
         return null
       }
       return (
-        <Card key={pkg.id} className="overflow-hidden bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
-          <div className="relative h-50 sm:h-70 md:h-60">
+           <Card key={pkg.id} className="overflow-hidden bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
+          <div className="relative h-60 sm:h-60 md:h-40 lg:h-72">
             <Image 
               src={pkg.image1 || "/images/default-tour.jpg"} 
               alt={pkg.title || "Tour package"}
