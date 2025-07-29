@@ -8,8 +8,8 @@ export function DestinationGrid() {
   return (
     <section className="py-12 sm:py-16 bg-white w-[90vw] mx-auto">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">PACK & GO GETAWAYS</h2>
-        
+        {/* <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">PACK & GO GETAWAYS</h2> */}
+        <h2 className="text-lg sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">PACK & GO GETAWAYS</h2>
         {/* Mobile: Single column stack */}
         <div className="grid grid-cols-1 gap-4 md:hidden">
           <Link href={`/tours?country=Karnataka`}>
