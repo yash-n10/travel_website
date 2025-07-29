@@ -18,27 +18,26 @@ export function FloatingVideoGrid() {
   const videoWidth = isMobile ? "40vw" : "220px"
   const videoHeight = isMobile ? "22.5vw" : "124px"
 
-  const videos = isMobile
+  const cards = isMobile
     ? [
-        { src: "/videos/video1.mp4", bottom: "4vw", right: "4vw" },
-        { src: "/videos/video2.mp4", bottom: "4vw", right: "48vw" },
-        { src: "/videos/video3.mp4", bottom: "4vw", right: "92vw" },
-        { src: "/videos/video4.mp4", bottom: "30vw", right: "4vw" },
-        { src: "/videos/video5.mp4", bottom: "30vw", right: "48vw" },
-        { src: "/videos/video6.mp4", bottom: "56vw", right: "4vw" },
+        { src: "/images/image_box1.jpeg", bottom: "4vw", right: "4vw" },
+        { src: "/images/image_box2.jpeg", bottom: "4vw", right: "48vw" },
+        { src: "/images/image_box3.jpeg", bottom: "4vw", right: "92vw" },
+        { src: "/images/image_box4.jpeg", bottom: "30vw", right: "4vw" },
+        { src: "/images/Karnataka.jpg", bottom: "30vw", right: "48vw" },
+        { src: "/images/ladakh.jpg", bottom: "56vw", right: "4vw" },
       ]
     : [
-        { src: "/videos/video1.mp4", bottom: "20px", right: "20px" },
-        { src: "/videos/video2.mp4", bottom: "20px", right: "260px" },
-        { src: "/videos/video3.mp4", bottom: "20px", right: "500px" },
-        { src: "/videos/video4.mp4", bottom: "160px", right: "20px" },
-        { src: "/videos/video5.mp4", bottom: "160px", right: "260px" },
-        { src: "/videos/video6.mp4", bottom: "300px", right: "20px" },
+        { src: "/images/image_box1.jpeg", bottom: "20px", right: "20px" },
+        { src: "/images/image_box2.jpeg", bottom: "20px", right: "260px" },
+        { src: "/images/image_box3.jpeg", bottom: "20px", right: "500px" },
+        { src: "/images/image_box4.jpeg", bottom: "160px", right: "20px" },
+        { src: "/images/Karnataka.jpg", bottom: "160px", right: "260px" },
+        { src: "/images/ladakh.jpg", bottom: "300px", right: "20px" },
       ]
 
-  // Ensure initial load state matches number of videos
   useEffect(() => {
-    setLoadedVideos(new Array(videos.length).fill(false))
+    setLoadedVideos(new Array(cards.length).fill(false))
   }, [isMobile])
 
   const handleVideoLoaded = (index: number) => {
@@ -61,7 +60,7 @@ export function FloatingVideoGrid() {
     >
       {/* Background Image */}
       <img
-        src="/images/hongKong.jpeg"
+        src="/images/Andaman.jpg"
         alt="City background"
         style={{
           position: "absolute",
@@ -73,14 +72,14 @@ export function FloatingVideoGrid() {
         }}
       />
 
-      {/* Video Grid */}
-      {videos.map((video, i) => (
+      {/* Video/Image Cards */}
+      {cards.map((card, i) => (
         <div
           key={i}
           style={{
             position: "absolute",
-            bottom: video.bottom,
-            right: video.right,
+            bottom: card.bottom,
+            right: card.right,
             width: videoWidth,
             height: videoHeight,
             border: "2px solid white",
@@ -104,18 +103,19 @@ export function FloatingVideoGrid() {
               }}
             >
               <img 
-                src="/images/dubai.jpeg" 
-                alt="Play" 
+                src={card.src} 
+                alt={`Thumbnail ${i}`} 
                 style={{
                   width: "100%",
                   height: "100%",
+                  objectFit: "cover",
                 }}
               />
             </div>
           )}
 
           <video
-            src={video.src}
+            src={card.src}
             autoPlay
             loop
             muted

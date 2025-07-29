@@ -56,7 +56,7 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
             <div className="border-t border-black w-full mx-auto my-4"></div>
             
             <p className="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+              Discover handpicked destinations, personalized experiences, and stress-free planning—all tailored to your taste. Whether you crave adventure, relaxation, or cultural exploration, your dream getaway starts here. Let us craft the perfect escape, just for you!
             </p>
 
             <div className=" mx-auto my-6 rounded-[10px]">
