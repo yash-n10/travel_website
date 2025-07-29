@@ -96,21 +96,14 @@ export function TourPackagesSection({
   return (
     <section className="py-12 sm:py-16 bg-white w-[90vw] mx-auto">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center mb-4 sm:mb-6">
+        <div className="flex justify-between items-center mb-4 sm:mb-6" >
           
           {/* <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">{title}</h2> */}
           {/* <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">{title}</h2> */}
-          <h2 className="text-lg sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">
-  {title}
-</h2>
+          <h2 className="text-lg sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">{title}</h2>
 
           {!isLoading && (
-            <Link 
-              href="/tours" 
-              className="text-red-600 hover:underline flex items-center text-xs sm:text-sm transition-colors"
-              prefetch={false}
-            >
-              View all <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
+            <Link  href="/tours" className="text-red-600 hover:underline flex items-center text-sm sm:text-sm transition-colors" prefetch={false}>View all <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
             </Link>
           )}
         </div>

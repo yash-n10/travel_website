@@ -143,12 +143,28 @@ export function HeroSection({
       </div>
 
       {/* Scroll to Top Button */}
-      <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 z-50 border-2 border-white/20">
+      {/* <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 z-50 border-2 border-white/20">
         <svg className="lucide lucide-arrow-up w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M5 12l7-7 7 7"></path>
           <path d="M12 19V5"></path>
         </svg>
+      </button> */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 z-50 border-2 border-white/20"
+      >
+        <svg
+          className="lucide lucide-arrow-up w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 12l7-7 7 7"></path>
+          <path d="M12 19V5"></path>
+        </svg>
       </button>
+
     </section>
   );
 }
