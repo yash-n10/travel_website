@@ -21,7 +21,7 @@ export async function GET(request: Request) {
     });
 
     const apiUrl = `https://ecomlancers.com/travel_website/Api/tours?${queryParams.toString()}`;
-    const response = await fetch(apiUrl);
+    const response = await fetch(apiUrl,{cache: "no-store",});
     
     if (!response.ok) {
       throw new Error(`API request failed with status ${response.status}`);

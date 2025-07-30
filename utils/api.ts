@@ -116,7 +116,7 @@ export async function fetchTestimonials(params = {}): Promise<Testimonial[]> {
 
     const fetchPromise = fetch(url, {
       next: { revalidate: 3600 }, // Revalidate every hour
-      cache: 'force-cache'
+      cache: "no-store",
     })
       .then(response => {
         if (!response.ok) throw new Error("Failed to fetch testimonials");
@@ -201,9 +201,9 @@ export async function fetchToursWithCookie(): Promise<any[]> {
       headers: {
         'Cookie': 'ci_session=90h805lb5j4gqbrgff96v6qji6k93tj6'
       },
+      cache: "no-store",
       // optional caching options (can remove if unnecessary)
       next: { revalidate: 3600 },
-      cache: 'force-cache'
     });
 
     if (!response.ok) {
