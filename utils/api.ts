@@ -20,9 +20,9 @@ export async function fetchTourPackages(params: string | Record<string, any> = {
     const fetchPromise = fetch(url, {
       next: { 
         tags: ['tours'],
-        revalidate: 3600
+        // revalidate: 3600
       },
-      cache: 'force-cache'
+      cache: "no-store",
     })
       .then(async (response) => {
         if (!response.ok) {
@@ -115,7 +115,7 @@ export async function fetchTestimonials(params = {}): Promise<Testimonial[]> {
     const url = `https://ecomlancers.com/travel_website/Api/testimonials${query ? `?${query}` : ""}`;
 
     const fetchPromise = fetch(url, {
-      next: { revalidate: 3600 }, // Revalidate every hour
+      // next: { revalidate: 3600 }, // Revalidate every hour
       cache: "no-store",
     })
       .then(response => {
@@ -198,12 +198,12 @@ export async function fetchToursWithCookie(): Promise<any[]> {
     const url = 'https://ecomlancers.com/travel_website/Api/tours';
     const response = await fetch(url, {
       method: 'GET',
-      headers: {
-        'Cookie': 'ci_session=90h805lb5j4gqbrgff96v6qji6k93tj6'
-      },
+      // headers: {
+      //   'Cookie': 'ci_session=90h805lb5j4gqbrgff96v6qji6k93tj6'
+      // },
       cache: "no-store",
       // optional caching options (can remove if unnecessary)
-      next: { revalidate: 3600 },
+      // next: { revalidate: 3600 },
     });
 
     if (!response.ok) {
