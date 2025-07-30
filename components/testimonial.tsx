@@ -38,10 +38,10 @@ export function TestimonialsSection({
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-10">Testimonials</h2>
 
         {testimonials.length > 0 ? (
-          <div className="relative max-w-2xl mx-auto">
-            {/* Orbiting avatars */}
-            <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-              <div className="w-96 h-96 relative">
+          <div className="relative w-full mx-auto">
+          {/* Orbiting avatars */}
+          <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <div className="w-96 h-96 relative">
                 {staticAvatarImages.map((image, index) => {
                   const angle = (index / staticAvatarImages.length) * 2 * Math.PI
                   const radius = 180
@@ -82,13 +82,14 @@ export function TestimonialsSection({
             {/* Rest of your testimonial content... */}
             <p className="text-sm text-red-600 font-semibold mb-1">{testimonials[currentTestimonial].title}</p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4 px-4">
-              {testimonials[currentTestimonial].text}
+              {testimonials[currentTestimonial].testimonial}
             </p>
             <p className="font-semibold text-gray-900">
               {testimonials[currentTestimonial].name}
             </p>
             <p className="text-sm text-gray-600 mb-6">
-              {testimonials[currentTestimonial].location}
+              {/* {testimonials[currentTestimonial].location} */}
+              Traveler
             </p>
 
             {/* Dot navigation */}
