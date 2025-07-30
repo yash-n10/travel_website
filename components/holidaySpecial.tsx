@@ -13,9 +13,10 @@ interface HolidayBannerProps {
 const HolidayBanner: React.FC<HolidayBannerProps> = ({ 
   className,
   images = [
-    "/images/london.jpeg",
-    "/images/peris.jpeg",
-    "/images/dubai.jpeg",
+    "/images/image_box2.jpeg",
+    "/images/image_box1.jpeg",
+    "/images/image_box3.jpeg",
+    "/images/image_box4.jpeg",
   ] 
 }) => {
   return (
