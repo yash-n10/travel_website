@@ -89,7 +89,7 @@ export function Footer() {
             </div>
             <div className="text-center sm:text-left">
               <h4 className="font-semibold mb-1">Email Us</h4>
-              <p className="break-all">holiday@gosam.com</p>
+              <p className="break-all">info@gosamyati.com</p>
             </div>
             <div className="text-center sm:text-left">
               <h4 className="font-semibold mb-1">Follow Us</h4>

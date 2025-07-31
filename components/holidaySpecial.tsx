@@ -20,6 +20,9 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
   ] 
 }) => {
   return (
+    <section className="pt-10 pb-4 sm:pt-14 sm:pb-4 bg-white w-[90vw] mx-auto">
+    <div className="container mx-auto px-4 sm:px-6">
+
   <div className={`bg-white pt-12 max-w-6xl mx-auto overflow-hidden ${className}`}>
       <div className="flex flex-col md:flex-row">
         {/* Image Slider - Left Side */}
@@ -70,6 +73,8 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
         </div>
       </div>
     </div>
+</div>
+    </section>
   );
 };
 

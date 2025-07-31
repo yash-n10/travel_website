@@ -270,7 +270,7 @@ export default function EnquiryPage() {
                     </div>
                     <div className="flex items-center text-gray-600">
                       <Mail className="w-4 h-4 mr-2" />
-                      <span>holiday@gosam.com</span>
+                      <span>info@gosamyati.com</span>
                     </div>
                   </div>
                 </div>
