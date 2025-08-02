@@ -23,7 +23,7 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
     <section className="pt-10 pb-4 sm:pt-14 sm:pb-4 bg-white w-[90vw] mx-auto">
     <div className="container mx-auto px-4 sm:px-6">
 
-  <div className={`bg-white pt-12 max-w-6xl mx-auto overflow-hidden ${className}`}>
+  <div className={`bg-white pt-12 max-w-8xl mx-auto overflow-hidden ${className}`}>
       <div className="flex flex-col md:flex-row">
         {/* Image Slider - Left Side */}
         <div className="w-full md:w-1/2 br-4 md:br-none overflow-hidden">

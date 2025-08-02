@@ -3,9 +3,8 @@
 import Image from "next/image"
 import { Quote } from "lucide-react"
 import { Testimonial } from "@/types/index"
-import { useMemo } from "react"
+import { useEffect, useMemo } from "react"
 
-// Array of different static profile images
 const staticAvatarImages = [
   "/images/profile.jpeg",
   "/images/profile2.jpeg",
@@ -20,17 +19,28 @@ const staticAvatarImages = [
 export function TestimonialsSection({
   testimonials,
   currentTestimonial,
-  setCurrentTestimonial
+  setCurrentTestimonial,
 }: {
   testimonials: Testimonial[]
   currentTestimonial: number
   setCurrentTestimonial: (value: number) => void
 }) {
+  // Auto-scroll testimonials every 5 seconds
+  useEffect(() => {
+    if (testimonials.length === 0) return
+
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+    }, 5000) // Change every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [testimonials.length, setCurrentTestimonial])
+
   // Get a random fallback image for the current testimonial
   const randomFallbackImage = useMemo(() => {
     const randomIndex = Math.floor(Math.random() * staticAvatarImages.length)
     return staticAvatarImages[randomIndex]
-  }, [currentTestimonial]) // Change when testimonial changes
+  }, [currentTestimonial])
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
@@ -39,9 +49,9 @@ export function TestimonialsSection({
 
         {testimonials.length > 0 ? (
           <div className="relative w-full mx-auto">
-          {/* Orbiting avatars */}
-          <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-            <div className="w-96 h-96 relative">
+            {/* Orbiting avatars */}
+            <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+              <div className="w-96 h-96 relative">
                 {staticAvatarImages.map((image, index) => {
                   const angle = (index / staticAvatarImages.length) * 2 * Math.PI
                   const radius = 180
@@ -57,7 +67,7 @@ export function TestimonialsSection({
                       className="rounded-full absolute opacity-40 blur-sm"
                       style={{
                         left: `calc(50% + ${x}px - 25px)`,
-                        top: `calc(50% + ${y}px - 25px)`
+                        top: `calc(50% + ${y}px - 25px)`,
                       }}
                     />
                   )
@@ -79,18 +89,16 @@ export function TestimonialsSection({
               </div>
             </div>
 
-            {/* Rest of your testimonial content... */}
-            <p className="text-sm text-red-600 font-semibold mb-1">{testimonials[currentTestimonial].title}</p>
+            <p className="text-sm text-red-600 font-semibold mb-1">
+              {testimonials[currentTestimonial].title}
+            </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-4 px-4">
               {testimonials[currentTestimonial].testimonial}
             </p>
             <p className="font-semibold text-gray-900">
               {testimonials[currentTestimonial].name}
             </p>
-            <p className="text-sm text-gray-600 mb-6">
-              {/* {testimonials[currentTestimonial].location} */}
-              Traveler
-            </p>
+            <p className="text-sm text-gray-600 mb-6">Traveler</p>
 
             {/* Dot navigation */}
             <div className="flex justify-center space-x-2">

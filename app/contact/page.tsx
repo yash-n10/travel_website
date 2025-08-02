@@ -142,7 +142,6 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-red-600 mr-3 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">holiday@gosam.com</p>
                       <p className="text-gray-600">info@gosamyati.com</p>
                     </div>
                   </div>
@@ -152,16 +151,18 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900">Address</h3>
                       <p className="text-gray-600">
-                        123 Travel Street,
-                        <br />
-                        Tourism District,
-                        <br />
-                        Mumbai, Maharashtra 400001
+                       Circle, No. 3493, Outer Ring Rd, 
+                       <br/>
+                       near Bagmane Constellation Business Park,
+                       <br/> next to Rainbow Children's Hospital, 
+                       <br/>Ferns City, Doddanekundi,
+                       <br/>
+                        Bengaluru, Karnataka 5600371
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start">
+                  {/* <div classNamex`="flex items-start">
                     <Clock className="w-5 h-5 text-red-600 mr-3 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Business Hours</h3>
@@ -173,7 +174,7 @@ export default function ContactPage() {
                         Sunday: 10:00 AM - 4:00 PM
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </CardContent>
             </Card>
@@ -340,7 +341,7 @@ export default function ContactPage() {
                         </div>
                       </div>
 
-                      <div>
+                      {/* <div>
                         <label htmlFor="numberOfTravelers" className="block text-sm font-medium text-gray-700 mb-2">
                           Number of Travelers
                         </label>
@@ -359,9 +360,9 @@ export default function ContactPage() {
                           <option value="6-10">6-10</option>
                           <option value="10+">10+</option>
                         </select>
-                      </div>
+                      </div> */}
 
-                      <div>
+                      {/* <div>
                         <label htmlFor="hotelCategory" className="block text-sm font-medium text-gray-700 mb-2">
                           Hotel Category
                         </label>
@@ -380,9 +381,9 @@ export default function ContactPage() {
                           <option value="boutique">Boutique</option>
                           <option value="resort">Resort</option>
                         </select>
-                      </div>
+                      </div> */}
 
-                      <div>
+                      {/* <div>
                         <label htmlFor="travelInterests" className="block text-sm font-medium text-gray-700 mb-2">
                           Travel Interests
                         </label>
@@ -396,9 +397,9 @@ export default function ContactPage() {
                           className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
                           placeholder="Tell us about your interests (adventure, culture, relaxation, food, etc.)"
                         />
-                      </div>
+                      </div> */}
 
-                      <div>
+                      {/* <div>
                         <label htmlFor="additionalMessage" className="block text-sm font-medium text-gray-700 mb-2">
                           Additional Message
                         </label>
@@ -412,7 +413,7 @@ export default function ContactPage() {
                           className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
                           placeholder="Any special requests or additional information?"
                         />
-                      </div>
+                      </div> */}
 
                       {submitError && (
                         <div className="text-red-500 text-sm">
@@ -449,7 +450,7 @@ export default function ContactPage() {
         </div>
 
         {/* Map Section - unchanged */}
-        <div className="mt-12 px-8">
+        {/* <div className="mt-12 px-8">
           <Card>
             <CardContent className="p-0">
               <div className="relative h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden">
@@ -463,7 +464,24 @@ export default function ContactPage() {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
+        <div className="mt-12 px-8">
+  <Card>
+    <CardContent className="p-0">
+      <div className="relative h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden">
+        {/* Embed Google Map */}
+        <iframe
+          className="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.421121374609!2d72.82696131475552!3d19.171346252014584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7c21308c3f3%3A0xdde4b20de0f17ac5!2s123%20Travel%20Street%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1691234567890!5m2!1sen!2sin"
+          loading="lazy"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </CardContent>
+  </Card>
+</div>
+
 
         {/* FAQ Section - unchanged */}
         <div className="mt-12 px-8">

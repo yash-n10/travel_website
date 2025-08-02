@@ -46,7 +46,7 @@ export function TourRedirectButton({
         disabled={disabled}
       >
         <span>Book Now</span>
-        {showIcon && <ExternalLink className="w-4 h-4" />}
+        {/* {showIcon && <ExternalLink className="w-4 h-4" />} */}
       </Button>
     </Link>
   )

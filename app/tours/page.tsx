@@ -15,6 +15,8 @@ import { slugify } from "@/utils/slugify"
 import { useRouter } from "next/navigation"
 import { Loader2, ExternalLink } from "lucide-react"
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+
 
 type Tour = {
   id: number
@@ -218,14 +220,14 @@ export default function ToursPage() {
 
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-900 mb-2">Highlights:</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
+                  {/* <ul className="text-sm text-gray-600 space-y-1">
                     {(tour.highlights || []).slice(0, 3).map((highlight, index) => (
                       <li key={index} className="flex items-start">
                         <span className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                         <span className="line-clamp-2">{highlight}</span>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </div>
 
                 <div className="flex items-center justify-between mt-4">
@@ -265,6 +267,9 @@ export default function ToursPage() {
           </div>
         )}
       </div>
+      <Footer />
+
     </div>
+    
   )
 }
