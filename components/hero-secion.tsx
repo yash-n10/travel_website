@@ -36,7 +36,7 @@ export function HeroSection({
       {/* Centered Text */}
       <div className="absolute inset-0 flex items-center justify-center px-4 z-20">
         <h1 className="text-white text-3xl sm:text-5xl font-bold text-center drop-shadow-2xl">
-          {/* Welcome to Go Samayati */}
+          Welcome to Go Samayati
         </h1>
       </div>
 
