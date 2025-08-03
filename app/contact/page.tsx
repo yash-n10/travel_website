@@ -105,7 +105,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 w-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Use Header component */}
       <Header 
         isMobileMenuOpen={isMobileMenuOpen}
