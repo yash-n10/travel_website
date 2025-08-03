@@ -15,17 +15,17 @@ export function FloatingVideoGrid() {
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
 
-  const videoWidth = isMobile ? "40vw" : "220px"
-  const videoHeight = isMobile ? "22.5vw" : "124px"
+  const videoWidth = isMobile ? "44vw" : "220px"
+  const videoHeight = isMobile ? "25vw" : "124px"
 
   const cards = isMobile
     ? [
-        { src: "/images/image_box1.jpeg", bottom: "4vw", right: "4vw" },
-        { src: "/images/image_box2.jpeg", bottom: "4vw", right: "48vw" },
-        { src: "/images/image_box3.jpeg", bottom: "4vw", right: "92vw" },
-        { src: "/images/image_box4.jpeg", bottom: "30vw", right: "4vw" },
-        { src: "/images/Karnataka.jpg", bottom: "30vw", right: "48vw" },
-        { src: "/images/ladakh.jpg", bottom: "56vw", right: "4vw" },
+        { src: "/images/image_box1.jpeg", bottom: "4vw", left: "4vw" },
+        { src: "/images/image_box2.jpeg", bottom: "4vw", left: "52vw" },
+        { src: "/images/image_box3.jpeg", bottom: "32vw", left: "4vw" },
+        { src: "/images/image_box4.jpeg", bottom: "32vw", left: "52vw" },
+        { src: "/images/Karnataka.jpg", bottom: "60vw", left: "4vw" },
+        { src: "/images/ladakh.jpg", bottom: "60vw", left: "52vw" },
       ]
     : [
         { src: "/images/image_box1.jpeg", bottom: "20px", right: "20px" },
@@ -53,7 +53,7 @@ export function FloatingVideoGrid() {
       style={{
         position: "relative",
         width: "100%",
-        height: isMobile ? "150vw" : "600px",
+        height: isMobile ? "90vw" : "600px",
         overflow: "hidden",
         marginTop: "2.5rem",
       }}
@@ -79,7 +79,7 @@ export function FloatingVideoGrid() {
           style={{
             position: "absolute",
             bottom: card.bottom,
-            right: card.right,
+            ...(isMobile ? { left: card.left } : { right: card.right }),
             width: videoWidth,
             height: videoHeight,
             border: "2px solid white",
@@ -102,9 +102,9 @@ export function FloatingVideoGrid() {
                 zIndex: 2,
               }}
             >
-              <img 
-                src={card.src} 
-                alt={`Thumbnail ${i}`} 
+              <img
+                src={card.src}
+                alt={`Thumbnail ${i}`}
                 style={{
                   width: "100%",
                   height: "100%",
