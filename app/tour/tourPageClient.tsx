@@ -19,7 +19,7 @@ import { Footer } from "@/components/footer";
 import { TourRedirectButton } from "@/components/tour-redirect-button";
 import { fetchTourPackages } from "@/utils/api";
 import { TourPackage } from "@/types/index";
-import { TourPackagesSection } from "@/components/tour-package";
+import { TourPackagesSection } from "@/components/tour-package2";
 
 export default function TourPageClient() {
   const searchParams = useSearchParams();

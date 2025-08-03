@@ -219,7 +219,7 @@ export default function ToursPage() {
                 </div>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Highlights:</h4>
+                  {/* <h4 className="text-sm font-semibold text-gray-900 mb-2">Highlights:</h4> */}
                   {/* <ul className="text-sm text-gray-600 space-y-1">
                     {(tour.highlights || []).slice(0, 3).map((highlight, index) => (
                       <li key={index} className="flex items-start">
@@ -242,7 +242,7 @@ export default function ToursPage() {
                     tourTitle={tour.title}
                     variant="default"
                     size="sm"
-                    className="bg-red-600 hover:bg-red-700"
+                    className=""
                     showIcon={true}
                     onTourSelect={(id) => setSelectedTourId(id)}
                   />
