@@ -69,11 +69,12 @@ export function Itinerary({ tourId }: ItineraryProps) {
       <div className="mb-6">
         <h2 className="text-lg font-bold text-red-600 mb-3">HIGHLIGHTS</h2>
         {highlights.length > 0 ? (
-          <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm pl-4">
+          <ul className="list-disc pl-4 text-gray-700 text-sm">
             {highlights.map((point, index) => (
               <li key={`highlight-${index}`}>{point}</li>
             ))}
           </ul>
+
         ) : (
           <p className="text-gray-600 text-sm p-3">No highlights available for this tour.</p>
         )}
