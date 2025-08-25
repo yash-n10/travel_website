@@ -15,7 +15,7 @@ export function PolicyAccordion() {
     },
     {
       id: "payment",
-      title: "PAYMENT POLICY",
+      title: "REFUND POLICY",
       content: "A 30% deposit is required at the time of booking. The remaining balance must be paid 30 days before departure."
     },
     {

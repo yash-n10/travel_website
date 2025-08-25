@@ -299,8 +299,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
           {/* Blog Excerpt */}
           <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8">
-            <p className="text-lg text-gray-700 italic leading-relaxed">
-              {blog.excerpt}
+            <p className="text-lg text-gray-700 italic leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.excerpt }}>
+              {/* {blog.excerpt} */}
             </p>
           </div>
 

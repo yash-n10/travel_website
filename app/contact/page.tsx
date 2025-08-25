@@ -134,7 +134,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
                       <p className="text-gray-600">+91 9940882200</p>
-                      <p className="text-gray-600">+91 9876543210</p>
+                      {/* <p className="text-gray-600">+91 9876543210</p> */}
                     </div>
                   </div>
 
@@ -150,7 +150,7 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-red-600 mr-3 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Address</h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 ">
                        Circle, No. 3493, Outer Ring Rd, 
                        <br/>
                        near Bagmane Constellation Business Park,

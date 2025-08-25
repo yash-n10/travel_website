@@ -175,7 +175,7 @@ export default function BlogsPage() {
         month: 'long',
         day: 'numeric'
       }),
-      content: newBlog.content || `<p>${newBlog.excerpt}</p>`,
+      content: newBlog.content || `<p dangerouslySetInnerHTML=${{ __html: newBlog.excerpt }}></p>`,
       authorImage: newBlog.image || "/images/default-author.jpg"
     }
 
@@ -423,8 +423,8 @@ export default function BlogsPage() {
           </div>
 
           <h3 className="text-xl font-bold text-gray-900 mb-3">{blog.title}</h3>
-          <p className="text-gray-600 mb-4 line-clamp-3">{blog.excerpt}</p>
-
+          <p className="text-gray-600 mb-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: blog.excerpt }}></p>
+{/* {blog.excerpt} */}
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               {blog.authorImage && (
@@ -485,7 +485,8 @@ export default function BlogsPage() {
           </div>
 
           <h3 className="text-xl font-bold text-gray-900 mb-3">{blog.title}</h3>
-          <p className="text-gray-600 mb-4 line-clamp-3">{blog.excerpt}</p>
+          <p className="text-gray-600 mb-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: blog.excerpt }}></p>
+            {/* {blog.excerpt} */}
 
           <div className="flex items-center justify-between">
             <div className="flex items-center">

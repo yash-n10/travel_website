@@ -91,11 +91,11 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
         <div className="space-y-3 text-sm">
           <div className="flex items-center">
             <Phone className="w-4 h-4 text-red-600 mr-3" />
-            <span className="text-gray-700">+91 9876543210</span>
+            <span className="text-gray-700">+91 9540882200 </span>
           </div>
           <div className="flex items-center">
             <Mail className="w-4 h-4 text-red-600 mr-3" />
-            <span className="text-gray-700">holiday@gosam.com</span>
+            <span className="text-gray-700">info@gosamyati.com</span>
           </div>
         </div>
       </div>
