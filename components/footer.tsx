@@ -8,7 +8,9 @@ import {
   Youtube,
   Mail,
   Linkedin,
+  MessageCircle 
 } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -76,6 +78,10 @@ export function Footer() {
               <a href="https://www.instagram.com/gosamyatiexpeditions/" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
               </a>
+              <a href="https://www.instagram.com/gosamyatiexpeditions/" target="_blank" rel="noopener noreferrer">
+                  <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+              </a>
+               
             </div>
           </div>
         </div>

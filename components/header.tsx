@@ -10,7 +10,8 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen }: {
 }) {
   return (
     <header className="bg-white shadow-sm relative z-50">
-      <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      {/* container  */}
+      <div className="w-full mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <img 
             src="/images/logo_new.png" 
