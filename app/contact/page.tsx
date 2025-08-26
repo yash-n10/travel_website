@@ -121,10 +121,10 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-8 items-stretch">
           {/* Contact Information - unchanged */}
-          <div className="lg:col-span-1">
-            <Card className="mb-6">
+          <div className="lg:col-span-1 flex flex-col">
+            <Card className="flex-1">
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-6">Contact Information</h2>
 
@@ -180,7 +180,7 @@ export default function ContactPage() {
             </Card>
 
             {/* Social Media - unchanged */}
-            <Card>
+            <Card className="mt-6">
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h2>
                 <div className="flex space-x-4">
@@ -202,8 +202,8 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form - modified with trip planning fields */}
-          <div className="lg:col-span-2">
-            <Card>
+          <div className="lg:col-span-2 flex flex-col">
+            <Card className="flex-1">
               <CardContent className="p-6">
                 {submitSuccess ? (
                   <div className="text-center py-8">
