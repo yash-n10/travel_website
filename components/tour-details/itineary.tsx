@@ -72,7 +72,7 @@ export function Itinerary({ tourId }: ItineraryProps) {
           <ul className="list-disc pl-4 text-gray-700 text-sm">
             {highlights.map((point, index) => (
               
-              <li key={`highlight-${index}`} dangerouslySetInnerHTML={{ __html: point }}></li>
+              <li key={`highlight-${index}`} dangerouslySetInnerHTML={{ __html: point }} className="w-[900px] break-words text-justify"></li>
               // <li key={`highlight-${index}`}>{point}</li>
             ))}
           </ul>
