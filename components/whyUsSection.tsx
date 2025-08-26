@@ -11,11 +11,11 @@ const features = [
 
 export function WhyUsSection() {
   return (
-    <div className="py-20 px-4 text-center">
+    <div className="w-full py-20 px-4 text-center">
       <h2 className="text-3xl font-semibold text-black mb-1">Why Us</h2>
       <p className="text-3xl font-bold text-red-600 mb-8">Because we care !</p>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-full mx-auto">
   {features.map((feature, index) => (
     <div
       key={index}

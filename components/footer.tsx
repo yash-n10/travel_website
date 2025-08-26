@@ -19,7 +19,7 @@ export function Footer() {
       <div className="bg-[#FF0000] h-[80%] sm:h-[80%] absolute bottom-0 w-full"></div>
 
       {/* Main content container */}
-      <div className="bg-[#F7F7F7] text-black py-8 sm:py-10 rounded-lg px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-48 max-w-[1600px] 3xl:max-w-[2000px] mx-[5%] relative z-10 bottom-[10vh] sm:bottom-[8vh] md:bottom-[5vh]">
+      <div className="bg-[#F7F7F7] text-black py-8 sm:py-10 rounded-lg px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-48  mx-[5%] relative z-10 bottom-[10vh] sm:bottom-[8vh] md:bottom-[5vh]">
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-20">
           {/* ABOUT GOSAMYATI */}

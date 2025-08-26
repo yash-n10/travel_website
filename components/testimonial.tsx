@@ -43,8 +43,8 @@ export function TestimonialsSection({
   }, [currentTestimonial])
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-4 text-center relative z-10">
+    <section className="w-full py-20 bg-white relative overflow-hidden">
+      <div className="w-full mx-auto px-4 text-center relative z-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-10">Testimonials</h2>
 
         {testimonials.length > 0 ? (

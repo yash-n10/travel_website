@@ -94,8 +94,8 @@ export function TourPackagesSection({
   }
 
   return (
-    <section className="pt-10 pb-4 sm:pt-14 sm:pb-4 bg-white w-[90vw] mx-auto">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section className="w-full pt-10 pb-4 sm:pt-14 sm:pb-4 bg-white w-[90vw] mx-auto">
+      <div className="w-full mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center mb-4 sm:mb-6" >
           
           {/* <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">{title}</h2> */}

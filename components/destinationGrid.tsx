@@ -7,9 +7,9 @@ import { Card } from "@/components/ui/card"
 export function DestinationGrid() {
   return (
     // <section className="py-12 sm:py-16 bg-white w-[90vw] mx-auto">
-    <section className="pt-10 pb-4 sm:pt-14 sm:pb-4 bg-white w-[90vw] mx-auto">
+    <section className="w-full pt-10 pb-4 sm:pt-14 sm:pb-4 bg-white w-[90vw] mx-auto">
 
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="w-full  mx-auto px-4 sm:px-6">
         {/* <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">PACK & GO GETAWAYS</h2> */}
         <h2 className="text-lg sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">PACK & GO GETAWAYS</h2>
         {/* Mobile: Single column stack */}

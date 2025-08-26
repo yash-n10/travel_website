@@ -262,10 +262,7 @@ export default function GoSamyatiTravel() {
       try {
         const res = await fetch("/api/testimonials");
         const result = await res.json();
-        console.log("####################################");
-        console.log(result.data);        
-        console.log("####################################");
-
+      
         setTestimonials(Array.isArray(result.data) ? result.data : []);
       } catch (err) {
         console.error("Failed to fetch testimonials:", err);

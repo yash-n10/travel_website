@@ -202,7 +202,7 @@ export default function BlogsPage() {
           isMobileMenuOpen={isMobileMenuOpen} 
           setIsMobileMenuOpen={setIsMobileMenuOpen} 
         />
-        <div className="container mx-auto px-0 py-8">
+        <div className="w-full mx-auto px-0 py-8">
           <div className="flex justify-center items-center min-h-[400px]">
             <div className="text-center">
               <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-red-600" />
@@ -221,7 +221,7 @@ export default function BlogsPage() {
         setIsMobileMenuOpen={setIsMobileMenuOpen} 
       />
 
-      <div className="container mx-auto px-0 py-8">
+      <div className="w-full mx-auto px-0 py-8">
         {/* <div className="flex justify-between items-center px-10 mb-8"> */}
         <section className="mb-12 px-4 sm:px-6 lg:px-20">
 
