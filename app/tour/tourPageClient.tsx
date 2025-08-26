@@ -191,7 +191,8 @@ export default function TourPageClient() {
                 </li>
               </ul>
             </div>
-
+            <PolicyAccordion />
+              <br/>
             <TourPackagesSection
               title="Related"
               packages={packages.slice(4, 8)}
@@ -199,7 +200,6 @@ export default function TourPageClient() {
               error={error}
               fallbackPackages={[]}
             />
-            <PolicyAccordion />
           </div>
 
           <div className="lg:col-span-1">
