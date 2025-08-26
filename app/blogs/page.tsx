@@ -222,154 +222,17 @@ export default function BlogsPage() {
       />
 
       <div className="container mx-auto px-0 py-8">
-        <div className="flex justify-between items-center px-10 mb-8">
+        {/* <div className="flex justify-between items-center px-10 mb-8"> */}
+        <section className="mb-12 px-4 sm:px-6 lg:px-20">
+
           <div className="text-center md:text-left">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">Travel Stories & Insights</h1>
             <p className="text-lg text-gray-600">
               Get inspired by our travel stories, destination guides, and expert tips.
             </p>
           </div>
-          {/* <div className="flex gap-4">
-            <Button 
-              onClick={() => fetchBlogs()}
-              variant="outline"
-              className="gap-2 hidden md:flex"
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <Loader2 className="w-4 h-4 animate-spin" />
-              ) : (
-                "Refresh"
-              )}
-            </Button>
-            <Button 
-              onClick={() => setIsWriting(true)}
-              className="gap-2 bg-red-600 hover:bg-red-700 text-white hidden md:flex"
-            >
-              <PenSquare className="w-4 h-4" />
-              Write Blog
-            </Button>
-          </div> */}
-        </div>
-
-        {/* Blog Writing Form */}
-        {/* {isWriting && (
-          <Card className="mb-12 p-6">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold">Create New Blog Post</h2>
-              <Button 
-                variant="outline" 
-                onClick={() => setIsWriting(false)}
-                className="text-red-600 border-red-600 hover:bg-red-50"
-              >
-                Cancel
-              </Button>
-            </div>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Title*</label>
-                  <input
-                    type="text"
-                    value={newBlog.title}
-                    onChange={(e) => setNewBlog({...newBlog, title: e.target.value})}
-                    className="w-full px-3 py-2 border rounded-md"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">Category*</label>
-                  <input
-                    type="text"
-                    value={newBlog.category}
-                    onChange={(e) => setNewBlog({...newBlog, category: e.target.value})}
-                    className="w-full px-3 py-2 border rounded-md"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-1">Excerpt*</label>
-                <textarea
-                  value={newBlog.excerpt}
-                  onChange={(e) => setNewBlog({...newBlog, excerpt: e.target.value})}
-                  className="w-full px-3 py-2 border rounded-md min-h-[100px]"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium mb-1">Content</label>
-                <textarea
-                  value={newBlog.content}
-                  onChange={(e) => setNewBlog({...newBlog, content: e.target.value})}
-                  className="w-full px-3 py-2 border rounded-md min-h-[200px]"
-                  placeholder="Detailed content (supports HTML)"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Author*</label>
-                  <input
-                    type="text"
-                    value={newBlog.author}
-                    onChange={(e) => setNewBlog({...newBlog, author: e.target.value})}
-                    className="w-full px-3 py-2 border rounded-md"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">Read Time*</label>
-                  <input
-                    type="text"
-                    value={newBlog.readTime}
-                    onChange={(e) => setNewBlog({...newBlog, readTime: e.target.value})}
-                    className="w-full px-3 py-2 border rounded-md"
-                    placeholder="e.g., 5 min read"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">Image URL</label>
-                  <input
-                    type="text"
-                    value={newBlog.image}
-                    onChange={(e) => setNewBlog({...newBlog, image: e.target.value})}
-                    className="w-full px-3 py-2 border rounded-md"
-                    placeholder="https://example.com/image.jpg"
-                  />
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="featured"
-                  checked={newBlog.featured}
-                  onChange={(e) => setNewBlog({...newBlog, featured: e.target.checked})}
-                  className="mr-2"
-                />
-                <label htmlFor="featured">Featured Post</label>
-              </div>
-
-              <div className="flex gap-4">
-                <Button type="submit" className="bg-red-600 hover:bg-red-700 text-white">
-                  Publish Blog
-                </Button>
-                <Button 
-                  type="button" 
-                  variant="outline"
-                  onClick={() => setIsWriting(false)}
-                >
-                  Cancel
-                </Button>
-              </div>
-            </form>
-          </Card>
-        )} */}
+        </section>
+        {/* </div> */}
 
         {/* Empty State */}
         {blogs.length === 0 && !isLoading && (
@@ -391,62 +254,126 @@ export default function BlogsPage() {
   <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Stories</h2>
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
     {featuredBlogs.map((blog) => (
-      <Card
-        key={blog.id}
-        className="w-full overflow-hidden hover:shadow-lg transition-shadow duration-300"
-      >
-        <div className="relative h-64">
-          <Image
-            src={blog.image || "/placeholder.svg"}
-            alt={blog.title}
-            fill
-            className="object-cover"
-            priority={blog.featured}
-          />
-          {blog.featured && (
-            <div className="absolute top-4 left-4">
-              <Badge className="bg-red-600 text-white">Featured</Badge>
-            </div>
-          )}
-        </div>
-        <CardContent className="p-6">
-          <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
-            <Badge variant="outline">{blog.category}</Badge>
-            <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-1" />
-              <span>{blog.date}</span>
-            </div>
-            <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-1" />
-              <span>{blog.readTime}</span>
-            </div>
-          </div>
+//       <Card
+//         key={blog.id}
+//         className="w-full overflow-hidden hover:shadow-lg transition-shadow duration-300"
+//       >
+//         <div className="relative h-64">
+//           <Image
+//             src={blog.image || "/placeholder.svg"}
+//             alt={blog.title}
+//             fill
+//             className="object-cover"
+//             priority={blog.featured}
+//           />
+//           {blog.featured && (
+//             <div className="absolute top-4 left-4">
+//               <Badge className="bg-red-600 text-white">Featured</Badge>
+//             </div>
+//           )}
+//         </div>
+//         <CardContent className="p-6">
+//           <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
+//             <Badge variant="outline">{blog.category}</Badge>
+//             <div className="flex items-center">
+//               <Calendar className="w-4 h-4 mr-1" />
+//               <span>{blog.date}</span>
+//             </div>
+//             <div className="flex items-center">
+//               <Clock className="w-4 h-4 mr-1" />
+//               <span>{blog.readTime}</span>
+//             </div>
+//           </div>
 
-          <h3 className="text-xl font-bold text-gray-900 mb-3">{blog.title}</h3>
-          <p className="text-gray-600 mb-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: blog.excerpt }}></p>
-{/* {blog.excerpt} */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              {blog.authorImage && (
-                <Image
-                  src={blog.authorImage}
-                  alt={blog.author}
-                  width={24}
-                  height={24}
-                  className="w-6 h-6 rounded-full mr-2"
-                />
-              )}
-              <span className="text-sm text-gray-600">{blog.author}</span>
-            </div>
-            <Button asChild variant="outline" className="group bg-transparent">
-              <Link href={`/blogs/${blog.slug}`} className="flex items-center">
-                Read More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+//           <h3 className="text-xl font-bold text-gray-900 mb-3">{blog.title}</h3>
+//           <p className="text-gray-600 mb-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: blog.excerpt }}></p>
+// {/* {blog.excerpt} */}
+//           <div className="flex items-center justify-between">
+//             <div className="flex items-center">
+//               {blog.authorImage && (
+//                 <Image
+//                   src={blog.authorImage}
+//                   alt={blog.author}
+//                   width={24}
+//                   height={24}
+//                   className="w-6 h-6 rounded-full mr-2"
+//                 />
+//               )}
+//               <span className="text-sm text-gray-600">{blog.author}</span>
+//             </div>
+//             <Button asChild variant="outline" className="group bg-transparent">
+//               <Link href={`/blogs/${blog.slug}`} className="flex items-center">
+//                 Read More
+//                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+//               </Link>
+//             </Button>
+//           </div>
+//         </CardContent>
+//       </Card>
+<Card
+  key={blog.id}
+  className="w-full overflow-hidden hover:shadow-lg transition-shadow duration-300"
+>
+  {/* Increased height for image */}
+  <div className="relative h-80"> 
+    <Image
+      src={blog.image || "/placeholder.svg"}
+      alt={blog.title}
+      fill
+      className="object-cover"
+      priority={blog.featured}
+    />
+    {blog.featured && (
+      <div className="absolute top-4 left-4">
+        <Badge className="bg-red-600 text-white">Featured</Badge>
+      </div>
+    )}
+  </div>
+
+  {/* Reduced padding for less text space */}
+  <CardContent className="p-4">  
+    <div className="flex items-center gap-4 text-xs text-gray-600 mb-2">  
+      <Badge variant="outline">{blog.category}</Badge>
+      <div className="flex items-center">
+        <Calendar className="w-3 h-3 mr-1" />
+        <span>{blog.date}</span>
+      </div>
+      <div className="flex items-center">
+        <Clock className="w-3 h-3 mr-1" />
+        <span>{blog.readTime}</span>
+      </div>
+    </div>
+
+    {/* Reduced text size & margin */}
+    <h3 className="text-lg font-semibold text-gray-900 mb-2">{blog.title}</h3>
+    <p
+      className="text-gray-600 mb-3 line-clamp-2 text-sm leading-snug"
+      dangerouslySetInnerHTML={{ __html: blog.excerpt }}
+    ></p>
+
+    <div className="flex items-center justify-between">
+      <div className="flex items-center">
+        {blog.authorImage && (
+          <Image
+            src={blog.authorImage}
+            alt={blog.author}
+            width={20}
+            height={20}
+            className="w-5 h-5 rounded-full mr-2"
+          />
+        )}
+        <span className="text-xs text-gray-600">{blog.author}</span>
+      </div>
+      <Button asChild variant="outline" className="group bg-transparent text-xs px-3 py-1">
+        <Link href={`/blogs/${blog.slug}`} className="flex items-center">
+          Read More
+          <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </Button>
+    </div>
+  </CardContent>
+</Card>
+
     ))}
   </div>
 </section>
