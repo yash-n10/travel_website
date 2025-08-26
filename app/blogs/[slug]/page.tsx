@@ -236,7 +236,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <div className="max-w-4xl mx-auto px-4 py-8 md:py-12">
         <div className="mb-8">
           <Button variant="outline" asChild>
-            <Link href="/blog" className="flex items-center hover:bg-gray-100">
+            <Link href="/blogs" className="flex items-center hover:bg-gray-100">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
