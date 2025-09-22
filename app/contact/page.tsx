@@ -6,9 +6,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Youtube, Send, Check } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Youtube, Send, Check,  Linkedin, MessageCircle  } from "lucide-react"
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer" 
+import { Footer } from "@/components/footer"
+import { FaWhatsapp } from "react-icons/fa";
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -184,17 +186,14 @@ export default function ContactPage() {
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h2>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-red-600 hover:text-red-700 transition-colors">
-                    <Facebook className="w-6 h-6" />
+                  <a href="https://www.linkedin.com/company/105933434/admin/dashboard/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
                   </a>
-                  <a href="#" className="text-red-600 hover:text-red-700 transition-colors">
-                    <Twitter className="w-6 h-6" />
+                  <a href="https://www.instagram.com/gosamyatiexpeditions/" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
                   </a>
-                  <a href="#" className="text-red-600 hover:text-red-700 transition-colors">
-                    <Instagram className="w-6 h-6" />
-                  </a>
-                  <a href="#" className="text-red-600 hover:text-red-700 transition-colors">
-                    <Youtube className="w-6 h-6" />
+                  <a href="https://wa.me/+919354571654" target="_blank" rel="noopener noreferrer">
+                      <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
                   </a>
                 </div>
               </CardContent>
