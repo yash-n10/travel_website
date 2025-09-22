@@ -19,9 +19,21 @@ export function HeroSection({
   currentHeroSlide: number;
   setCurrentHeroSlide: React.Dispatch<React.SetStateAction<number>>;
 }) {
+  const prevSlide = () => {
+    setCurrentHeroSlide(
+      currentHeroSlide === 0 ? heroSlides.length - 1 : currentHeroSlide - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentHeroSlide(
+      currentHeroSlide === heroSlides.length - 1 ? 0 : currentHeroSlide + 1
+    );
+  };
+
   return (
     <section className="relative h-[70vh] overflow-hidden">
-      {/* Background Image - full width restored */}
+      {/* Background Image */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat">
         <Image
           src={heroSlides[currentHeroSlide]?.image || "/images/placeholder.jpg"}
@@ -39,6 +51,38 @@ export function HeroSection({
           Welcome to Go Samayati
         </h1> */}
       </div>
+
+      {/* Left Arrow */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-all duration-300"
+      >
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M15 18l-6-6 6-6"></path>
+        </svg>
+      </button>
+
+      {/* Right Arrow */}
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-all duration-300"
+      >
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M9 18l6-6-6-6"></path>
+        </svg>
+      </button>
 
       {/* Dot Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">

@@ -1,8 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Link from "next/link";
 
 interface HolidayBannerProps {
@@ -26,11 +27,12 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
           {/* Image Slider */}
           <div className="w-full md:w-1/2 overflow-hidden">
             <Swiper
-              modules={[Autoplay, Pagination]}
+              modules={[Autoplay, Pagination, Navigation]}
               spaceBetween={0}
               slidesPerView={1}
               autoplay={{ delay: 3000 }}
               pagination={{ clickable: true }}
+              navigation
               loop
               className="h-full"
             >
@@ -76,6 +78,22 @@ const HolidayBanner: React.FC<HolidayBannerProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Arrow Styling */}
+      <style jsx>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: black !important;
+          font-size: 24px !important;
+          font-weight: bold;
+        }
+        .swiper-button-next::after {
+          content: "→";
+        }
+        .swiper-button-prev::after {
+          content: "←";
+        }
+      `}</style>
     </section>
   );
 };
