@@ -215,7 +215,7 @@ export default function BlogsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-screen">
       <Header 
         isMobileMenuOpen={isMobileMenuOpen} 
         setIsMobileMenuOpen={setIsMobileMenuOpen} 
@@ -458,24 +458,6 @@ export default function BlogsPage() {
 
         <Footer/>
 
-        {/* Newsletter Signup */}
-        <section className="bg-red-600 p-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-4">Stay Updated</h2>
-          <p className="mb-6 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest travel tips, stories, and exclusive offers.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="flex-1 px-4 py-2 rounded-md text-gray-900" 
-              required
-            />
-            <Button className="bg-white text-red-600 hover:bg-gray-100">
-              Subscribe
-            </Button>
-          </div>
-        </section>
 
       </div>
     </div>

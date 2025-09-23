@@ -227,7 +227,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-screen">
       <Header 
         isMobileMenuOpen={isMobileMenuOpen} 
         setIsMobileMenuOpen={setIsMobileMenuOpen} 

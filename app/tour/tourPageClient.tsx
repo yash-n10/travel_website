@@ -127,7 +127,7 @@ export default function TourPageClient() {
 
   if (error || !tourPackage) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center w-screen">
         <div className="text-center">
           <h2 className="text-xl font-bold text-red-600 mb-2">Tour Package Not Found</h2>
           <p className="text-gray-600 mb-4">{error || "The requested tour package could not be loaded."}</p>

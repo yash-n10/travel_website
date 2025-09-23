@@ -97,7 +97,7 @@ export default function BookingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-screen">
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">

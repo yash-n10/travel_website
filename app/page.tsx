@@ -273,7 +273,7 @@ export default function GoSamyatiTravel() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-screen">
       <Header 
         isMobileMenuOpen={isMobileMenuOpen} 
         setIsMobileMenuOpen={setIsMobileMenuOpen} 
