@@ -336,7 +336,12 @@ export default function BlogsPage() {
       <Badge variant="outline">{blog.category}</Badge>
       <div className="flex items-center">
         <Calendar className="w-3 h-3 mr-1" />
-        <span>{blog.date}</span>
+        {/* <span>{blog.date}</span> */}
+        <span>  {new Date(blog.date).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}</span> 
       </div>
       <div className="flex items-center">
         <Clock className="w-3 h-3 mr-1" />
@@ -403,7 +408,12 @@ export default function BlogsPage() {
             <Badge variant="outline">{blog.category}</Badge>
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-1" />
-              <span>{blog.date}</span>
+              {/* <span>{blog.date}</span> */}
+              <span>  {new Date(blog.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}</span> 
             </div>
             <div className="flex items-center">
               <Clock className="w-4 h-4 mr-1" />
