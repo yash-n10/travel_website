@@ -41,7 +41,7 @@ function PrivacyPolicy() {
 
             <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Privacy policy</h2>
-                <p className="text-sm text-gray-500 mb-6">Last updated: July 20th, 2025</p>
+                <p className="text-sm text-gray-500 mb-6">Last updated: October 4th,2025</p>
 
                 <div className="prose max-w-none">
                       <div className="p-4 text-justify">
