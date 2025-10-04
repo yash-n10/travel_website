@@ -189,9 +189,9 @@ lifelong stories of growth and discovery.<br/><br/>
                   <Star className="w-4 h-4 fill-current" />
                 </div>
               </div>
-              <button className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">
-                Contact Sarah
-              </button>
+              <LinkButton
+              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Sarah</LinkButton>
+
             </div>
             
             <div className="text-center">
@@ -212,9 +212,8 @@ lifelong stories of growth and discovery.<br/><br/>
                   <Star className="w-4 h-4 fill-current" />
                 </div>
               </div>
-              <button className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">
-                Contact Michael
-              </button>
+              <LinkButton
+              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Michael</LinkButton>
             </div>
             
             <div className="text-center">
@@ -235,9 +234,8 @@ lifelong stories of growth and discovery.<br/><br/>
                   <Star className="w-4 h-4 fill-current" />
                 </div>
               </div>
-              <button className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">
-                Contact Emma
-              </button>
+              <LinkButton href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Emma</LinkButton>
+                
             </div>
           </div>
         </div>
