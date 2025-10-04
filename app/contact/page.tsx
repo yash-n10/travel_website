@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Check, Linkedin, Instagram, Send } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp,FaGoogle } from "react-icons/fa";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -175,6 +175,9 @@ export default function ContactPage() {
                   </a>
                   <a href="https://wa.me/+919354571654" target="_blank" rel="noopener noreferrer">
                     <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                  </a>
+                  <a href="https://share.google/T6mnJFHnguRR1VBGE" target="_blank" rel="noopener noreferrer">
+                    <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
                   </a>
                 </div>
               </CardContent>
