@@ -78,20 +78,20 @@ export default function TravelWebsite() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Story Began With A Simple Belief</h2>
-           Our Story Began with a Simple Belief  
-At GoSamyati Expeditions, we believe travel should be transformative, not just about 
-sightseeing. Born from a passion for authentic exploration, we specialize in 
-experiential and expedition tourism, guiding travelers beyond the ordinary into the 
-heart of every destination.  <br/><br/>
-Our mission is to create meaningful journeys, fostering connections and leaving lasting 
-impacts on both travelers and local communities.<br/><br/>  
-With a focus on ethical practices, transparency, and sustainability, we craft immersive 
-adventures that go beyond checklists. Whether it’s a solo trip, family getaway, or 
-cultural immersion, GoSamyati designs experiences that turn memories into lifelong 
-stories of growth and discovery. <br/><br/>
-At GoSamyati Expeditions, we believe travel should be transformative, not just about 
-immersion, GoSamyati Expeditions designs experiences that turn memories into 
-lifelong stories of growth and discovery.<br/><br/>
+            Our Story Began with a Simple Belief  
+            At GoSamyati Expeditions, we believe travel should be transformative, not just about 
+            sightseeing. Born from a passion for authentic exploration, we specialize in 
+            experiential and expedition tourism, guiding travelers beyond the ordinary into the 
+            heart of every destination.  <br/><br/>
+            Our mission is to create meaningful journeys, fostering connections and leaving lasting 
+            impacts on both travelers and local communities.<br/><br/>  
+            With a focus on ethical practices, transparency, and sustainability, we craft immersive 
+            adventures that go beyond checklists. Whether it’s a solo trip, family getaway, or 
+            cultural immersion, GoSamyati designs experiences that turn memories into lifelong 
+            stories of growth and discovery. <br/><br/>
+            At GoSamyati Expeditions, we believe travel should be transformative, not just about 
+            immersion, GoSamyati Expeditions designs experiences that turn memories into 
+            lifelong stories of growth and discovery.<br/><br/>
             <button 
               onClick={openPopup}
               className="bg-red-600 text-white px-8 py-3 rounded font-semibold hover:bg-red-700 transition-colors"
@@ -173,12 +173,12 @@ lifelong stories of growth and discovery.<br/><br/>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold mb-2">Sarah Johnson</h3>
-              <p className="text-red-600 font-medium mb-2">European Specialist</p>
+              <h3 className="text-xl font-semibold mb-2">Ritika</h3>
+              <p className="text-red-600 font-medium mb-2">Travel Specialist</p>
               <p className="text-gray-600 text-sm">
-                With over 15 years of experience exploring Europe, Sarah has visited over 40
-                countries and speaks 5 languages fluently. She specializes in cultural
-                immersion and off-the-beaten-path adventures.
+                With over 10 years of experience exploring Indian Destinations,
+                 Ritika has visited most of the states and speaks 3 languages fluently.
+                  She specializes in cultural immersion and off-the-beaten-path adventures.
               </p>
               <div className="flex justify-center mt-4">
                 <div className="flex text-yellow-400">
@@ -196,12 +196,11 @@ lifelong stories of growth and discovery.<br/><br/>
             
             <div className="text-center">
               <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold mb-2">Michael Chen</h3>
-              <p className="text-red-600 font-medium mb-2">Asia-Pacific Expert</p>
+              <h3 className="text-xl font-semibold mb-2">Isheeta</h3>
+              <p className="text-red-600 font-medium mb-2">Destination Specialist</p>
               <p className="text-gray-600 text-sm">
-                Michael's deep knowledge of Asian cultures and destinations comes from
-                living in the region for over a decade. He creates authentic experiences
-                that showcase the best of Asia.
+              Isheeta's deep knowledge of Asian cultures and destinations comes from living in the region for over a decade.
+              She creates authentic experiences that showcase the best of Asia/India.
               </p>
               <div className="flex justify-center mt-4">
                 <div className="flex text-yellow-400">
@@ -218,12 +217,11 @@ lifelong stories of growth and discovery.<br/><br/>
             
             <div className="text-center">
               <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-              <h3 className="text-xl font-semibold mb-2">Emma Rodriguez</h3>
-              <p className="text-red-600 font-medium mb-2">Adventure Coordinator</p>
+              <h3 className="text-xl font-semibold mb-2">Amruta</h3>
+              <p className="text-red-600 font-medium mb-2">Travel Consultant</p>
               <p className="text-gray-600 text-sm">
-                Emma specializes in adventure travel and outdoor experiences. From mountain
-                trekking to scuba diving, she ensures every adventure is both thrilling and
-                safe for our travelers.
+              Amruta specializes in adventure travel and outdoor experiences.
+              From mountain trekking to scuba diving, she ensures every adventure is both thrilling and safe for our travelers.
               </p>
               <div className="flex justify-center mt-4">
                 <div className="flex text-yellow-400">
@@ -234,7 +232,8 @@ lifelong stories of growth and discovery.<br/><br/>
                   <Star className="w-4 h-4 fill-current" />
                 </div>
               </div>
-              <LinkButton href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Emma</LinkButton>
+              <LinkButton
+              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Emma</LinkButton>
                 
             </div>
           </div>

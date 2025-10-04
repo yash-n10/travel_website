@@ -39,67 +39,120 @@ function PrivacyPolicy() {
                 </div>
             </header>
 
-            <section className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Privacy policy</h2>
-                <p className="text-sm text-gray-500 mb-6">Last updated: October 4th,2025</p>
+      <div className="max-w-5xl mx-auto px-6 py-12 text-gray-800 leading-relaxed">
+      <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Privacy policy</h2>
+        <p className="text-sm text-gray-500 mb-6">Last updated: October 4th,2025</p>
+        <p className="mb-6">
+            GoSamyati Expeditions Pvt Ltd is committed to maintaining the privacy of personal information that you
+            provide to us when using the GoSamyati Expeditions website. This Privacy Policy describes how we treat
+            personal information received about you when you visit{" "}
+            <a href="/" className="text-blue-600 hover:underline">
+            www.gosamyati.com
+            </a>
+            . We may make content or services from other websites including our co-branded websites available to you
+            from links located on our site. These other websites are not subject to this Privacy Policy. We recommend
+            that you review the privacy policy at each such website to determine how that site protects your privacy.
+        </p>
 
-                <div className="prose max-w-none">
-                      <div className="p-4 text-justify">
-      <p className="mb-4">
-        At GoSamyati, your privacy is of utmost importance to us. This Privacy Policy outlines how we collect, use, store, and protect your personal information when you interact with our website www.gosamyati.com or use any of our services.
-        <br />
-        By using our website, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.
-      </p>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Our Commitment</h2>
+        <p className="mb-6">
+            While information is the cornerstone of our ability to provide superior service, our most important asset
+            is our clients’ trust. Keeping client information secure, and using it only as our clients would want us
+            to, is a top priority for all of us at GoSamyati Expeditions Pvt Ltd. Here then, is our promise to our
+            individual customers:
+        </p>
+        <ul className="list-disc list-inside space-y-2 mb-6">
+            <li>
+            We will safeguard, according to strict standards of security and confidentiality, any information our
+            customers share with us.
+            </li>
+            <li>
+            We will limit the collection and use of customer information to the minimum required to deliver superior
+            service.
+            </li>
+            <li>
+            We will permit only authorized employees, trained in proper handling of customer information, to access
+            that information.
+            </li>
+            <li>
+            We will not reveal customer information to any external organization unless previously informed in
+            disclosures/agreements, or required by law.
+            </li>
+            <li>
+            We may share customer information with reputable companies when a customer has expressed an interest in
+            their services/products (this Privacy Policy does not cover how they use it).
+            </li>
+            <li>
+            Whenever we hire other organizations to provide support services, we will require them to comply with our
+            privacy standards.
+            </li>
+            <li>
+            We will attempt to keep customer files complete, up-to-date, and accurate and provide a way for customers
+            to access or correct their information (unless prohibited by law).
+            </li>
+        </ul>
 
-      <p className="mb-4">
-        About GoSamyati<br />
-        Whether you’re dreaming of a Himalayan trek, a peaceful escape to the hills, an adventure-filled weekend, or a luxurious experiential stay—GoSamyati curates seamless travel experiences that inspire, uplift, and connect you to destinations across India and beyond.
-        <br /><br />
-        1. Legal Compliance<br />
-        GoSamyati abides by all applicable Indian data protection laws and strives to maintain the highest standards of user privacy and data security. We take proactive steps to prevent unauthorized access, data breaches, or misuse of your personal information. However, no online platform can guarantee absolute data security, and transmission over the internet is done at your own risk.
-        <br /><br />
-        2. Cookies<br />
-        Our website uses cookies to provide a more personalized and efficient experience. Cookies are small text files stored on your device that remember user preferences and browsing behavior.
-        <br /><br />
-        You can manage or disable cookies at any time through your browser settings. Some cookies are essential for the website to function properly, while others help us analyze performance and tailor ads through trusted partners like Google Ads.
-        <br /><br />
-        3. Analytics and Tracking<br />
-        GoSamyati uses tracking tools to monitor website traffic and user interaction. These analytics are solely for internal use to improve user experience and optimize our services. No personal information is shared with any third-party analytics provider.
-        <br /><br />
-        4. Promotional Communication<br />
-        When you sign up or book with us, you may be added to our mailing list. We may use your contact information to send travel updates, offers, and newsletters. You can unsubscribe anytime using the link in our emails or by contacting us directly.
-        <br /><br />
-        5. External Links<br />
-        Our website may include links to external websites for your convenience. These third-party sites operate independently and have their own privacy policies. GoSamyati is not responsible for the content or practices of these external platforms. Please click such links at your own risk.
-        <br /><br />
-        6. Advertisements and Sponsored Content<br />
-        You may come across sponsored listings, promotional offers, or referral programs on our website. These may redirect you to partner sites. Such partners may use cookies to track your activity. While we only work with trusted affiliates, GoSamyati is not responsible for data collected by external advertisers.
-        <br /><br />
-        7. Social Media Usage<br />
-        We actively engage with users on platforms like Instagram, Facebook, and YouTube. While we promote content and respond to queries, we never ask for sensitive personal information via social media. Users should exercise caution and avoid sharing personal data in public comment sections or messages.
-        <br /><br />
-        Our website also includes social sharing buttons. Users are advised to use them at their own discretion.
-        <br /><br />
-        8. Shortened Links<br />
-        We may share shortened URLs on social media for easier sharing. However, shortened links can sometimes be misused. Users are encouraged to verify links before clicking, as GoSamyati cannot be held responsible for breaches resulting from third-party platforms.
-        <br /><br />
-        9. Confidentiality<br />
-        All user information is treated as confidential. We do not disclose it to any third party except as required by law or with your express permission. Any sensitive data shared with you by GoSamyati must also be treated as confidential unless authorized in writing for disclosure.
-        <br /><br />
-        10. Disclaimer<br />
-        By using this website, you agree to this Privacy Policy. If you do not agree with any part of this policy, please discontinue use of our platform. Violation of our policies may result in suspension of access or legal action, if applicable.
-      </p>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Information We Collect</h2>
+        <h3 className="text-xl font-semibold mt-4 mb-2">General</h3>
+        <p className="mb-6">
+            When you register, and at other times, we may collect personally identifiable information such as name,
+            address, telephone number, email, and details about your computer. We do not knowingly collect information
+            from children under 13. If under 18, you may not provide personal information without parental/guardian
+            consent.
+        </p>
 
-      <p className="mb-4">
-        Contact Us<br />
-        For any privacy-related questions, requests, or complaints, please reach out to:
-        <br /><br />
-        📧 support@gosamyati.com<br />
-        🌐 www.gosamyati.com
-      </p>
-    </div>
-                </div>
-            </section>
+        <h3 className="text-xl font-semibold mt-4 mb-2">Website Usage Information</h3>
+        <p className="mb-6">
+            We automatically collect IP addresses and website usage information when you visit. This helps us evaluate
+            visitor and customer use of our site on an aggregate basis.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">How We Use Information</h2>
+        <ul className="list-disc list-inside space-y-2 mb-6">
+            <li>For the purposes for which you specifically provided the information.</li>
+            <li>To send you notifications about products, services, and special offers.</li>
+            <li>To enhance or develop new features, products, and services.</li>
+            <li>To personalize content and advertising based on preferences.</li>
+            <li>
+            To combine information collected on our site with information from other services you use with us.
+            </li>
+            <li>
+            To disclose or use information in special cases (e.g., enforce Terms of Use, protect rights, or as
+            required by law).
+            </li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Cookies</h2>
+        <p className="mb-6">
+            We employ cookie technology to help visitors and customers move faster through our site. Cookies are
+            temporary or stored pieces of information sent by a website to your computer.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Security</h2>
+        <p className="mb-6">
+            Personally identifiable information is stored on limited-access servers, safeguarded to protect its
+            security.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Internet-based Transfers</h2>
+        <p className="mb-6">
+            Given the global nature of the Internet, data transfers may occur internationally. By using our site, you
+            agree to this processing of data.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Policy Modifications</h2>
+        <p className="mb-6">
+            We may update this Privacy Policy from time to time. If changes are made, they will be posted here. We will
+            not use previously collected personal information inconsistently with this Privacy Policy without your prior
+            consent.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Comments and Questions</h2>
+        <p className="mb-6">
+            If you have any questions, comments, or concerns about our Privacy Policy, please contact us.
+        </p>
+        </div>
         </div>
         <Footer />
         </>
