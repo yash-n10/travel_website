@@ -9,9 +9,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
+  compiler: {
+    // Move reactRemoveProperties here instead of experimental
     reactRemoveProperties: { properties: ['^fdprocessedid$'] },
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
