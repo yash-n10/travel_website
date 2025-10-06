@@ -180,30 +180,30 @@ const fallbackPackages: TourPackage[] = [
 
 const heroSlides: HeroSlide[] = [
   {
-    image: "/images/heritage-hotel.webp",
+    image: "/images/slide1.jpeg",
     categories: [
-      { name: "Heritage", image: "/images/heritage-hotel.webp" },
-      { name: "Cities", image: "/images/portlouis.jpeg" },
-      { name: "Beach", image: "/images/mauritius-beach.jpeg" },
+      { name: "Heritage", image: "/images/slide1.jpeg" },
+      { name: "Cities", image: "/images/slide2.jpeg" },
+      { name: "Beach", image: "/images/slide3.jpeg" },
 
     ],
   },
   {
-    image: "/images/portlouis.jpeg",
+    image: "/images/slide2.jpeg",
     categories: [
-      { name: "Cities", image: "/images/portlouis.jpeg" },
-      { name: "Heritage", image: "/images/heritage-hotel.webp" },
-      { name: "Beach", image: "/images/mauritius-beach.jpeg" },
+      { name: "Cities", image: "/images/slide2.jpeg" },
+      { name: "Heritage", image: "/images/slide3.jpeg" },
+      { name: "Beach", image: "/images/slide1.jpeg" },
 
     ],
   },
  
   {
-    image: "/images/mauritius-beach.jpeg",
+    image: "/images/slide3.jpeg",
     categories: [
-      { name: "Beach", image: "/images/mauritius-beach.jpeg" },
-      { name: "Cities", image: "/images/portlouis.jpeg" },
-      { name: "Heritage", image: "/images/heritage-hotel.webp" },
+      { name: "Beach", image: "/images/slide3.jpeg" },
+      { name: "Cities", image: "/images/slide1.jpeg" },
+      { name: "Heritage", image: "/images/slide2.jpeg" },
 
     ],
   },
