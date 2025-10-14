@@ -56,19 +56,19 @@ export default function TravelWebsite() {
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             {/* <div className="text-3xl font-bold text-red-600 mb-2">50K+</div> */}
-            <div className="text-gray-600">Diverse Experience</div>
+            <div className="text-white border border-red-800 bg-red-600 p-2 rounded">Diverse Experience</div>
           </div>
           <div>
             {/* <div className="text-3xl font-bold text-red-600 mb-2">120+</div> */}
-            <div className="text-gray-600">Trusted by thousands</div>
+            <div className="text-white border border-red-800 bg-red-600 p-2 rounded">Trusted by thousands</div>
           </div>
           <div>
             {/* <div className="text-3xl font-bold text-red-600 mb-2">8</div> */}
-            <div className="text-gray-600">Traveler First</div>
+            <div className="text-white border border-red-800 bg-red-600 p-2 rounded">Traveler First</div>
           </div>
           <div>
             {/* <div className="text-3xl font-bold text-red-600 mb-2">99%</div> */}
-            <div className="text-gray-600">Exceeding Expectations</div>
+            <div className="text-white border border-red-800 bg-red-600 p-2 rounded">Exceeding Expectations</div>
           </div>
         </div>
       </section>
