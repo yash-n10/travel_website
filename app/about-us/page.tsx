@@ -101,13 +101,13 @@ export default function TravelWebsite() {
           </div>
           <div className="relative">
             <img 
-              src="/images/peris.jpeg" 
-              alt="Eiffel Tower" 
+              src="/images/about_us.jpg" 
+               
               className="rounded-lg shadow-lg w-full"
             />
-            <div className="absolute bottom-4 left-4 bg-red-600 text-white px-4 py-2 rounded">
-              {/* <span className="font-semibold">45 Years</span> */}
-            </div>
+            {/* <div className="absolute bottom-4 left-4 bg-red-600 text-white px-4 py-2 rounded">
+              <span className="font-semibold">45 Years</span>
+            </div> */}
           </div>
         </div>
       </section>
