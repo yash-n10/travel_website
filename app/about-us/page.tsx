@@ -172,7 +172,9 @@ export default function TravelWebsite() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4">
+                <img src="/images/avatar1.jpg" alt="Ritika" width={128} height={128} className="rounded-full mx-auto mb-4"/>
+              </div>
               <h3 className="text-xl font-semibold mb-2">Ritika</h3>
               <p className="text-red-600 font-medium mb-2">Travel Specialist</p>
               <p className="text-gray-600 text-sm">
@@ -195,7 +197,9 @@ export default function TravelWebsite() {
             </div>
             
             <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4">
+                <img src="/images/avatar2.jpg" alt="Isheeta" width={128} height={128} className="rounded-full mx-auto mb-4"/>
+              </div>
               <h3 className="text-xl font-semibold mb-2">Isheeta</h3>
               <p className="text-red-600 font-medium mb-2">Destination Specialist</p>
               <p className="text-gray-600 text-sm">
@@ -216,7 +220,9 @@ export default function TravelWebsite() {
             </div>
             
             <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4">
+                <img src="/images/avatar4.jpg" alt="Amruta" width={128} height={128} className="rounded-full mx-auto mb-4"/>
+              </div>
               <h3 className="text-xl font-semibold mb-2">Amruta</h3>
               <p className="text-red-600 font-medium mb-2">Travel Consultant</p>
               <p className="text-gray-600 text-sm">
