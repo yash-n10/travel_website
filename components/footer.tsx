@@ -31,7 +31,7 @@ export function Footer() {
               <li><Link href="#" className="hover:underline block py-1">Gosamyati Review</Link></li>
               <li><Link href="/terms-and-conditions" className="hover:underline block py-1">Terms and Conditions</Link></li>
               <li><Link href="/privacy-policy" className="hover:underline block py-1">Privacy Policies</Link></li>
-              <li><Link href="#" className="hover:underline block py-1">Support</Link></li>
+              <li><Link href="/contact" className="hover:underline block py-1">Support</Link></li>
             </ul>
           </div>
 
