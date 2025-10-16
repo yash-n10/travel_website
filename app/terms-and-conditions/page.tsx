@@ -36,7 +36,7 @@ function TermsAndConditions() {
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900 border-b pb-2">Terms and Condition</h2>
                         <p className="text-sm text-gray-500 mt-1">Last updated: July 20th, 2025</p>
-                        <p className="mt-4">
+                        <p className="mt-4 text-justify text-balance">
                             The contract placed between the Client and Company (between “you” and “our company”) is important to us.
                             We assure that the contract will not be revealed to any private third parties. GoSamyati Expeditions will
                             stand with their customers in matters of any dispute or claim. However, we are not responsible for problems
@@ -47,7 +47,7 @@ function TermsAndConditions() {
 
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900">Secure your Booking</h2>
-                        <p>
+                        <p className="text-justify text-balance">
                             To secure a booking, a minimum deposit is required for all tour packages. Sometimes a higher deposit may be
                             requested to cover payment conditions. You should read the booking conditions and general information of the
                             selected tour. Questions can be clarified via phone or email at{" "}
@@ -60,7 +60,7 @@ function TermsAndConditions() {
 
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900">Payment for your Tour</h2>
-                        <p>
+                        <p className="text-justify text-balance">
                             After the deposit, the balance must be paid within the agreed period. In some cases, full payment may be
                             required before the holiday begins. Non-payment may result in cancellation of your booking.
                         </p>
@@ -73,12 +73,12 @@ function TermsAndConditions() {
                             <li>Bank: IndusInd Bank</li>
                             <li>IFSC Code: INDB0000220</li>
                         </ul>
-                        <p>All payments must be made to this account or through official payment gateways. Avoid personal transfers.</p>
+                        <p className="text-justify text-balance">All payments must be made to this account or through official payment gateways. Avoid personal transfers.</p>
                     </div>
 
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900">Change in Booking</h2>
-                        <p>
+                        <p className="text-justify text-balance">
                             Requests for booking changes must be sent by email from the primary booking holder. Minor changes may be
                             accepted, but major changes are not always possible.
                         </p>
@@ -86,13 +86,13 @@ function TermsAndConditions() {
 
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900">Cancellation of Booking</h2>
-                        <p>
+                        <p className="text-justify text-balance">
                             Cancellation is allowed depending on circumstances. Customers must inform us via call or email within a
                             stipulated period. Cancellation charges may apply based on policies.
                         </p>
 
                         <h3 className="text-xl font-semibold mt-4 mb-2">Cancellations & Refund Policies</h3>
-                        <p>
+                        <p className="text-justify text-balance">
                             Payments contribute to operational costs. Cancellation fees are charged to cover these expenses.
                         </p>
 
@@ -106,7 +106,7 @@ function TermsAndConditions() {
 
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900">Complaints</h2>
-                        <p>
+                        <p className="text-justify text-balance">
                             Send complaints to{" "}
                             <a href="mailto:info@gosamyati.com" className="text-blue-600 underline">
                                 info@gosamyati.com
@@ -116,7 +116,7 @@ function TermsAndConditions() {
 
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900">Our Responsibility</h2>
-                        <p>
+                        <p className="text-justify text-balance">
                             We ensure careful arrangements. However, we are not responsible for illegal acts, violence, or personal losses
                             during the tour.
                         </p>

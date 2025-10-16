@@ -76,7 +76,7 @@ export default function TravelWebsite() {
       {/* Story Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="text-justify text-balance">
             <h2 className="text-3xl font-bold mb-6">Our Story Began With A Simple Belief</h2>
             Our Story Began with a Simple Belief  
             At GoSamyati Expeditions, we believe travel should be transformative, not just about 
@@ -116,7 +116,7 @@ export default function TravelWebsite() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">What Drives Us Forward</h2>
-          <p className="text-gray-600 mb-12">
+          <p className="text-gray-600 mb-12 text-justify text-balance">
             Our values guide every decision we make as a tour organization on making the best
             travel experiences for our customers.
           </p>
@@ -127,7 +127,7 @@ export default function TravelWebsite() {
                 <Heart className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Authentic Experiences</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify text-balance">
                 We believe in creating genuine connections with local cultures and communities,
                 ensuring every journey offers authentic and meaningful experiences that go beyond
                 typical tourist attractions.
@@ -139,7 +139,7 @@ export default function TravelWebsite() {
                 <Globe className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Ethical practices</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify text-balance">
                 We're committed to responsible tourism that respects local environments and
                 communities, ensuring our travel practices contribute positively to the
                 destinations we visit.
@@ -151,7 +151,7 @@ export default function TravelWebsite() {
                 <Award className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Excellence in Service</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-justify text-balance">
                 From the moment you inquire about a trip to your safe return home, we're
                 dedicated to providing exceptional service that exceeds your expectations at
                 every step of your journey.
@@ -165,7 +165,7 @@ export default function TravelWebsite() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Meet Our Travel Experts</h2>
-          <p className="text-gray-600 mb-12">
+          <p className="text-gray-600 mb-12 text-justify text-balance">
             Our dedicated team of travel specialists brings decades of combined
             experience and regional expertise to make your perfect adventure.
           </p>
