@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 // import { SpeedInsights } from '@vercel/analytics/next'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: {
@@ -63,6 +64,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans antialiased">
+        <Script  id="razorpay-checkout-script"
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            strategy="lazyOnload" />
         {children}
         <Analytics />
         {/* <SpeedInsights /> */}

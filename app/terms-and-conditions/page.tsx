@@ -36,7 +36,7 @@ function TermsAndConditions() {
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900 border-b pb-2">Terms and Condition</h2>
                         <p className="text-sm text-gray-500 mt-1">Last updated: July 20th, 2025</p>
-                        <p className="mt-4">
+                        <p className="mt-4 text-justify text-balance">
                             The contract placed between the Client and Company (between “you” and “our company”) is important to us.
                             We assure that the contract will not be revealed to any private third parties. GoSamyati Expeditions will
                             stand with their customers in matters of any dispute or claim. However, we are not responsible for problems
