@@ -43,7 +43,7 @@ function PrivacyPolicy() {
       <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Privacy policy</h2>
         <p className="text-sm text-gray-500 mb-6">Last updated: October 4th,2025</p>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             GoSamyati Expeditions Pvt Ltd is committed to maintaining the privacy of personal information that you
             provide to us when using the GoSamyati Expeditions website. This Privacy Policy describes how we treat
             personal information received about you when you visit{" "}
@@ -56,13 +56,13 @@ function PrivacyPolicy() {
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Our Commitment</h2>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             While information is the cornerstone of our ability to provide superior service, our most important asset
             is our clients’ trust. Keeping client information secure, and using it only as our clients would want us
             to, is a top priority for all of us at GoSamyati Expeditions Pvt Ltd. Here then, is our promise to our
             individual customers:
         </p>
-        <ul className="list-disc list-inside space-y-2 mb-6">
+        <ul className="list-disc list-inside space-y-2 mb-6 ">
             <li>
             We will safeguard, according to strict standards of security and confidentiality, any information our
             customers share with us.
@@ -95,7 +95,7 @@ function PrivacyPolicy() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Information We Collect</h2>
         <h3 className="text-xl font-semibold mt-4 mb-2">General</h3>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             When you register, and at other times, we may collect personally identifiable information such as name,
             address, telephone number, email, and details about your computer. We do not knowingly collect information
             from children under 13. If under 18, you may not provide personal information without parental/guardian
@@ -103,13 +103,13 @@ function PrivacyPolicy() {
         </p>
 
         <h3 className="text-xl font-semibold mt-4 mb-2">Website Usage Information</h3>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             We automatically collect IP addresses and website usage information when you visit. This helps us evaluate
             visitor and customer use of our site on an aggregate basis.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">How We Use Information</h2>
-        <ul className="list-disc list-inside space-y-2 mb-6">
+        <ul className="list-disc list-inside space-y-2 mb-6 ">
             <li>For the purposes for which you specifically provided the information.</li>
             <li>To send you notifications about products, services, and special offers.</li>
             <li>To enhance or develop new features, products, and services.</li>
@@ -124,32 +124,32 @@ function PrivacyPolicy() {
         </ul>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Cookies</h2>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             We employ cookie technology to help visitors and customers move faster through our site. Cookies are
             temporary or stored pieces of information sent by a website to your computer.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Security</h2>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             Personally identifiable information is stored on limited-access servers, safeguarded to protect its
             security.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Internet-based Transfers</h2>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             Given the global nature of the Internet, data transfers may occur internationally. By using our site, you
             agree to this processing of data.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Policy Modifications</h2>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             We may update this Privacy Policy from time to time. If changes are made, they will be posted here. We will
             not use previously collected personal information inconsistently with this Privacy Policy without your prior
             consent.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Comments and Questions</h2>
-        <p className="mb-6">
+        <p className="mb-6 text-justify text-balance">
             If you have any questions, comments, or concerns about our Privacy Policy, please contact us.
         </p>
         </div>
