@@ -76,8 +76,8 @@ export default function TravelWebsite() {
       {/* Story Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-justify text-balance">
-            <h2 className="text-3xl font-bold mb-6">Our Story Began With A Simple Belief</h2>
+          <div className="text-justify text-balance" >
+            <h2 className="text-3xl font-bold mb-6 ">Our Story Began With A Simple Belief</h2>
             Our Story Began with a Simple Belief  
             At GoSamyati Expeditions, we believe travel should be transformative, not just about 
             sightseeing. Born from a passion for authentic exploration, we specialize in 

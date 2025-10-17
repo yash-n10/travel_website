@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Phone, Mail } from "lucide-react"
 import { fetchTourPackages } from "@/utils/api"
 import { TourPackage } from "@/types/index"
+import { BookNowButton } from "@/components/BookNowButton"
 
 interface BookingSidebarProps {
   tourId: string | number
@@ -65,12 +66,12 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
               )}
             </div>
 
-            <Button 
-              className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-sm font-semibold"
-              disabled={loading || !!error}
-            >
-              BOOK NOW
-            </Button>
+            <BookNowButton
+              amount={Number((price || "0").toString().replace(/[^0-9]/g, ""))}
+              currency="INR"
+              slot_id={String(tourId)}
+              courseTitle=""
+            />
 
             <Link href="/contact">
               <Button
