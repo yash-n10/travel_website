@@ -23,7 +23,7 @@ export function FloatingVideoGrid() {
         { src: "/images/floatingVideoGrid1.jpg", bottom: "4vw", left: "4vw" },
         { src: "/images/floatingVideoGrid2.jpg", bottom: "4vw", left: "52vw" },
         { src: "/images/floatingVideoGrid3.jpg", bottom: "32vw", left: "4vw" },
-        { src: "/images/floatingVideoGrid4.jpg", bottom: "32vw", left: "52vw" },
+        { src: "/images/floatingVideoGrid7.jpg", bottom: "32vw", left: "52vw" },
         { src: "/images/floatingVideoGrid5.jpg", bottom: "60vw", left: "4vw" },
         { src: "/images/floatingVideoGrid6.jpg", bottom: "60vw", left: "52vw" },
       ]
@@ -31,7 +31,7 @@ export function FloatingVideoGrid() {
         { src: "/images/floatingVideoGrid1.jpg", bottom: "20px", right: "20px" },
         { src: "/images/floatingVideoGrid2.jpg", bottom: "20px", right: "260px" },
         { src: "/images/floatingVideoGrid3.jpg", bottom: "20px", right: "500px" },
-        { src: "/images/floatingVideoGrid4.jpg", bottom: "160px", right: "20px" },
+        { src: "/images/floatingVideoGrid7.jpg", bottom: "160px", right: "20px" },
         { src: "/images/floatingVideoGrid5.jpg", bottom: "160px", right: "260px" },
         { src: "/images/floatingVideoGrid6.jpg", bottom: "300px", right: "20px" },
       ]
@@ -60,7 +60,7 @@ export function FloatingVideoGrid() {
     >
       {/* Background Image */}
       <img
-        src="/images/rectangle_background.jpg"
+        src="/images/grid_background.jpeg"
         alt="City background"
         style={{
           position: "absolute",
@@ -68,6 +68,8 @@ export function FloatingVideoGrid() {
           width: "100%",
           height: "100%",
           objectFit: "cover",
+                objectPosition: "top", // Ensures top of the image stays visible
+
           zIndex: 0,
         }}
       />

@@ -180,30 +180,30 @@ const fallbackPackages: TourPackage[] = [
 
 const heroSlides: HeroSlide[] = [
   {
-    image: "/images/slide1.jpeg",
+    image: "/images/new_slide1.jpg",
     categories: [
-      { name: "Heritage", image: "/images/slide1.jpeg" },
-      { name: "Cities", image: "/images/slide2.jpeg" },
-      { name: "Beach", image: "/images/slide3.jpeg" },
+      { name: "Heritage", image: "/images/new_slide1.jpg" },
+      { name: "Cities", image: "/images/new_slide2.jpg" },
+      { name: "Beach", image: "/images/new_slide3.jpg" },
 
     ],
   },
   {
-    image: "/images/slide2.jpeg",
+    image: "/images/new_slide2.jpg",
     categories: [
-      { name: "Cities", image: "/images/slide2.jpeg" },
-      { name: "Heritage", image: "/images/slide3.jpeg" },
-      { name: "Beach", image: "/images/slide1.jpeg" },
+      { name: "Cities", image: "/images/new_slide2.jpg" },
+      { name: "Heritage", image: "/images/new_slide3.jpg" },
+      { name: "Beach", image: "/images/new_slide1.jpg" },
 
     ],
   },
  
   {
-    image: "/images/slide3.jpeg",
+    image: "/images/new_slide3.jpg",
     categories: [
-      { name: "Beach", image: "/images/slide3.jpeg" },
-      { name: "Cities", image: "/images/slide1.jpeg" },
-      { name: "Heritage", image: "/images/slide2.jpeg" },
+      { name: "Beach", image: "/images/new_slide3.jpg" },
+      { name: "Cities", image: "/images/new_slide1.jpg" },
+      { name: "Heritage", image: "/images/new_slide2.jpg" },
 
     ],
   },

@@ -23,7 +23,7 @@ function PrivacyPolicy() {
             <header className="mb-8 relative h-64 rounded-lg overflow-hidden">
                 {/* Background Image using next/image with fill layout */}
                 <Image
-                    src="/images/privacy-policy.jpg"
+                    src="/images/privacy_policy_new.jpg"
                     alt="Privacy Policy Background"
                     fill
                     className="object-cover"
