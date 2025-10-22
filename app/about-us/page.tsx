@@ -192,7 +192,7 @@ export default function TravelWebsite() {
                 </div>
               </div>
               <LinkButton
-              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Sarah</LinkButton>
+              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Ritika</LinkButton>
 
             </div>
             
@@ -216,7 +216,7 @@ export default function TravelWebsite() {
                 </div>
               </div>
               <LinkButton
-              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Michael</LinkButton>
+              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Isheeta</LinkButton>
             </div>
             
             <div className="text-center">
@@ -239,7 +239,7 @@ export default function TravelWebsite() {
                 </div>
               </div>
               <LinkButton
-              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Emma</LinkButton>
+              href="/contact" className="mt-4 bg-red-600 text-white px-6 py-2 rounded text-sm hover:bg-red-700 transition-colors">Contact Amruta</LinkButton>
                 
             </div>
           </div>
