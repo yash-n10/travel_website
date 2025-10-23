@@ -167,17 +167,17 @@ export default function ContactPage() {
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h2>
                 <div className="flex space-x-4">
-                  <a href="https://www.linkedin.com/company/105933434/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-                  </a>
                   <a href="https://www.instagram.com/gosamyatiexpeditions/" target="_blank" rel="noopener noreferrer">
                     <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                  </a>
+                  <a href="https://share.google/T6mnJFHnguRR1VBGE" target="_blank" rel="noopener noreferrer">
+                    <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
                   </a>
                   <a href="https://wa.me/+919354571654" target="_blank" rel="noopener noreferrer">
                     <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
                   </a>
-                  <a href="https://share.google/T6mnJFHnguRR1VBGE" target="_blank" rel="noopener noreferrer">
-                    <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                  <a href="https://www.linkedin.com/company/105933434/admin/dashboard/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
                   </a>
                 </div>
               </CardContent>
