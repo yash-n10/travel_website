@@ -27,7 +27,7 @@ export function Footer() {
             <h3 className="text-lg xl:text-xl font-bold mb-3 sm:mb-4">ABOUT GOSAMYATI</h3>
             <ul className="space-y-2 text-sm xl:text-base">
               <li><Link href="/about-us" className="hover:underline block py-1">About Us</Link></li>
-              <li><Link href="#" className="hover:underline block py-1">We are Hiring</Link></li>
+              <li><Link href="/hiring" className="hover:underline block py-1">We are Hiring</Link></li>
               <li><Link href="#" className="hover:underline block py-1">Gosamyati Review</Link></li>
               <li><Link href="/terms-and-conditions" className="hover:underline block py-1">Terms and Conditions</Link></li>
               <li><Link href="/privacy-policy" className="hover:underline block py-1">Privacy Policies</Link></li>
@@ -74,17 +74,17 @@ export function Footer() {
           <div className="text-center sm:text-left">
             <h4 className="font-semibold mb-1">Follow Us</h4>
             <div className="flex justify-center sm:justify-start space-x-4 mt-1">
-              <a href="https://www.linkedin.com/company/105933434/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-              </a>
               <a href="https://www.instagram.com/gosamyatiexpeditions/" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+              </a>
+              <a href="https://share.google/T6mnJFHnguRR1VBGE" target="_blank" rel="noopener noreferrer">
+                  <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
               </a>
               <a href="https://wa.me/+919354571654" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
               </a>
-               <a href="https://share.google/T6mnJFHnguRR1VBGE" target="_blank" rel="noopener noreferrer">
-                  <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                             <a href="https://www.linkedin.com/company/105933434/admin/dashboard/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
               </a>
               
             </div>
