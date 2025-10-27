@@ -31,9 +31,9 @@ function PrivacyPolicy() {
                     priority />
 
                 {/* Content overlay */}
-                <div className="absolute inset-0 backdrop-blur-sm bg-white/30 flex items-center justify-center p-6">
+                <div className="absolute inset-0 backdr bg-black/40 flex items-center justify-center p-6">
                     <div className="text-center max-w-max">
-                        <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy policy</h1>
+                        <h1 className="text-3xl font-bold text-white mb-2">Privacy policy</h1>
                         {/* <p className="text-lg text-gray-700 font-semibold">Privacy policy Tagline</p> */}
                     </div>
                 </div>

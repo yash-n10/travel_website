@@ -40,14 +40,37 @@ export default function HiringPage() {
         const res = await fetch("/api/hiring")
         const text = await res.text()
         console.log("text", text)
-        let data: any
-        try { data = JSON.parse(text) } catch { data = text }
+        // Try to parse JSON; if there's a non-JSON prefix like "ext ", parse from the first '{'
+        let parsed: any = null
+        try {
+          parsed = JSON.parse(text)
+        } catch {
+          const braceIdx = text.indexOf('{')
+          if (braceIdx !== -1) {
+            const maybe = text.slice(braceIdx)
+            try { parsed = JSON.parse(maybe) } catch {}
+          }
+        }
+        const data: any = parsed ?? text
 
-        let items: VacancyItem[] = []
+        let items: any[] = []
         if (Array.isArray(data)) items = data
         else if (data?.data && Array.isArray(data.data)) items = data.data
         else if (data?.vacancies && Array.isArray(data.vacancies)) items = data.vacancies
-        setJobs(items)
+
+        // Map external shape { job_title, job_description, ... } to our UI fields
+        if (items.length && items[0] && (items[0].job_title || items[0].job_description)) {
+          items = items.map((j: any) => ({
+            id: j.id,
+            title: j.job_title ?? j.title ?? j.position,
+            position: j.position,
+            department: j.department,
+            location: j.location,
+            description: j.job_description ?? j.description,
+          }))
+        }
+
+        setJobs(items as VacancyItem[])
       } catch (e: any) {
         setError(e?.message || "Failed to load jobs")
         setJobs([])
@@ -113,10 +136,8 @@ export default function HiringPage() {
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h2 className="text-xl font-semibold">{job.title || job.position || `Position #${job.id}`}</h2>
-                      <p className="text-sm text-gray-600 mt-1">
-                        {job.department ? `${job.department} · ` : ""}{job.location || "Location: N/A"}
-                      </p>
+                      <h2 className="text-lg font-normal"> <span className="font-semibold">Job Id- </span>{String(job.id ?? idx)} </h2>
+                      <h2 className="text-xl font-normal"> <span className="font-semibold">Job Title- </span>{job.title || job.position || 'Position'}</h2>
                     </div>
                     <Button onClick={() => handleSelectJob(String(job.id ?? job.title ?? idx))}>Apply</Button>
                   </div>
@@ -158,7 +179,7 @@ export default function HiringPage() {
                       <option value="" disabled>Select a job</option>
                       {jobs.map((job, idx) => (
                         <option key={String(job.id ?? idx)} value={String(job.id ?? job.title ?? idx)}>
-                          {job.title || job.position || `Position #${job.id}`}
+                          Job Id-{String(job.id ?? idx)} - {job.title || job.position || 'Position'}
                         </option>
                       ))}
                     </select>

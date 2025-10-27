@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -13,6 +14,20 @@ import {
 import { FaWhatsapp ,FaGoogle } from "react-icons/fa";
 import { SiGoogle } from "react-icons/si"; 
 export function Footer() {
+  const [settings, setSettings] = useState<any>(null)
+  useEffect(() => {
+    const run = async () => {
+      try {
+        const res = await fetch("/api/site-settings", { cache: "no-store" })
+        const text = await res.text()
+        let out: any = text
+        try { out = JSON.parse(text) } catch {}
+        setSettings(out?.data ?? out ?? null)
+      } catch (err) {
+      }
+    }
+    run()
+  }, [])
   return (
     <div className="relative mt-20">
       {/* Red background container */}
@@ -65,27 +80,35 @@ export function Footer() {
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm xl:text-base">
           <div className="text-center sm:text-left">
             <h4 className="font-semibold mb-1">Call Us</h4>
-            <p className="break-all">+91 9540882200</p>
+            {settings?.phone1 && <p className="break-all">{settings.phone1}</p>}
           </div>
           <div className="text-center sm:text-left">
             <h4 className="font-semibold mb-1">Email Us</h4>
-            <p className="break-all">info@gosamyati.com</p>
+            {settings?.email && <p className="break-all">{settings.email}</p>}
           </div>
           <div className="text-center sm:text-left">
             <h4 className="font-semibold mb-1">Follow Us</h4>
             <div className="flex justify-center sm:justify-start space-x-4 mt-1">
-              <a href="https://www.instagram.com/gosamyatiexpeditions/" target="_blank" rel="noopener noreferrer">
-                <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-              </a>
-              <a href="https://share.google/T6mnJFHnguRR1VBGE" target="_blank" rel="noopener noreferrer">
-                  <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-              </a>
-              <a href="https://wa.me/+919354571654" target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-              </a>
-                             <a href="https://www.linkedin.com/company/105933434/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-              </a>
+              {settings?.instagram && (
+                <a href={settings.instagram} target="_blank" rel="noopener noreferrer">
+                  <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                </a>
+              )}
+              {settings?.google && (
+                <a href={settings.google} target="_blank" rel="noopener noreferrer">
+                    <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                </a>
+              )}
+              {settings?.whatsapp && (
+                <a href={settings.whatsapp} target="_blank" rel="noopener noreferrer">
+                    <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                </a>
+              )}
+              {settings?.linkedin && (
+                <a href={settings.linkedin} target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                </a>
+              )}
               
             </div>
           </div>

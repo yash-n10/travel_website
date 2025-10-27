@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -12,6 +12,20 @@ import { Footer } from "@/components/footer"
 import { FaWhatsapp,FaGoogle } from "react-icons/fa";
 
 export default function ContactPage() {
+  const [settings, setSettings] = useState<any>(null)
+  useEffect(() => {
+    const run = async () => {
+      try {
+        const res = await fetch('/api/site-settings', { cache: 'no-store' })
+        const text = await res.text()
+        let out: any = text
+        try { out = JSON.parse(text) } catch {}
+        setSettings(out?.data ?? out ?? null)
+      } catch (e) {
+      }
+    }
+    run()
+  }, [])
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -131,7 +145,9 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5 text-red-600 mr-3 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+91 9940882200</p>
+                      {settings?.phone1 && (
+                        <p className="text-gray-600">{settings.phone1}</p>
+                      )}
                     </div>
                   </div>
 
@@ -139,7 +155,9 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-red-600 mr-3 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">info@gosamyati.com</p>
+                      {settings?.email && (
+                        <p className="text-gray-600">{settings.email}</p>
+                      )}
                     </div>
                   </div>
 
@@ -147,15 +165,9 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-red-600 mr-3 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Address</h3>
-                      <p className="text-gray-600 ">
-                       Circle, No. 3493, Outer Ring Rd, 
-                       <br/>
-                       near Bagmane Constellation Business Park,
-                       <br/> next to Rainbow Children's Hospital, 
-                       <br/>Ferns City, Doddanekundi,
-                       <br/>
-                        Bengaluru, Karnataka 5600371
-                      </p>
+                      {settings?.address && (
+                        <p className="text-gray-600 " dangerouslySetInnerHTML={{ __html: settings.address }} />
+                      )}
                     </div>
                   </div>
                 </div>
@@ -167,18 +179,26 @@ export default function ContactPage() {
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h2>
                 <div className="flex space-x-4">
-                  <a href="https://www.instagram.com/gosamyatiexpeditions/" target="_blank" rel="noopener noreferrer">
-                    <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-                  </a>
-                  <a href="https://share.google/T6mnJFHnguRR1VBGE" target="_blank" rel="noopener noreferrer">
-                    <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-                  </a>
-                  <a href="https://wa.me/+919354571654" target="_blank" rel="noopener noreferrer">
-                    <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-                  </a>
-                  <a href="https://www.linkedin.com/company/105933434/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
-                  </a>
+                  {settings?.instagram && (
+                    <a href={settings.instagram} target="_blank" rel="noopener noreferrer">
+                      <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                    </a>
+                  )}
+                  {settings?.google && (
+                    <a href={settings.google} target="_blank" rel="noopener noreferrer">
+                      <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                    </a>
+                  )}
+                  {settings?.whatsapp && (
+                    <a href={settings.whatsapp} target="_blank" rel="noopener noreferrer">
+                      <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                    </a>
+                  )}
+                  {settings?.linkedin && (
+                    <a href={settings.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                    </a>
+                  )}
                 </div>
               </CardContent>
             </Card>
