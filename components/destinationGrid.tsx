@@ -15,7 +15,7 @@ export function DestinationGrid() {
         {/* Mobile: Single column stack */}
         <div className="grid grid-cols-1 gap-4 md:hidden">
           <Link href={`/tours?country=Karnataka`}>
-            <Card className="relative overflow-hidden rounded-lg h-[200px] group cursor-pointer">
+            <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
               <Image src="/images/go_gateaway1.jpeg" alt="Karnataka " fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
@@ -24,7 +24,7 @@ export function DestinationGrid() {
             </Card>
           </Link>
           <Link href={`/tours?country=Andaman`}>
-            <Card className="relative overflow-hidden rounded-lg h-[200px] group cursor-pointer">
+            <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
               <Image src="/images/go_gateaway2.jpeg" alt="Andaman" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
@@ -33,7 +33,7 @@ export function DestinationGrid() {
             </Card>
           </Link>
           <Link href={`/tours?country=Kerala`}>
-            <Card className="relative overflow-hidden rounded-lg h-[200px] group cursor-pointer">
+            <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
               <Image src="/images/go_gateaway3.jpeg" alt="Kerala" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
@@ -42,7 +42,7 @@ export function DestinationGrid() {
             </Card>
           </Link>
           <Link href={`/tours?country=Himachal Pradesh`}>
-            <Card className="relative overflow-hidden rounded-lg h-[200px] group cursor-pointer">
+            <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
               <Image src="/images/go_gateaway4.jpeg" alt="Himachal Pradesh" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
@@ -51,7 +51,7 @@ export function DestinationGrid() {
             </Card>
           </Link>
           <Link href={`/tours?country=Ladakh`}>
-            <Card className="relative overflow-hidden rounded-lg h-[200px] group cursor-pointer">
+            <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
               <Image src="/images/go_gateaway5.jpeg" alt="Ladakh" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
@@ -60,7 +60,7 @@ export function DestinationGrid() {
             </Card>
           </Link>
           <Link href={`/tours?country=Uttarakhand`}>
-            <Card className="relative overflow-hidden rounded-lg h-[200px] group cursor-pointer">
+            <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
               <Image src="/images/go_gateaway6.jpeg" alt="Uttarakhand" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
@@ -71,7 +71,7 @@ export function DestinationGrid() {
         </div>
 
         {/* Desktop: Exact layout matching reference image */}
-        <div className="hidden md:flex gap-4 h-[400px]">
+        <div className="hidden md:flex gap-4 md:h-[55vw] lg:h-[40vw] xl:h-[35vw] 2xl:h-[30vw]">
           {/* Left Column - 2x2 grid */}
           <div className="flex flex-col gap-4 w-1/3">
             <div className="flex gap-4 h-1/2">
