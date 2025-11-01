@@ -55,7 +55,7 @@ export function InclusionExclusion({
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
                 {icons[item]}
               </div>
-              <span className="text-xs text-red-600 font-medium">{item.replace(/_/g, " ")}</span>
+              <span className="text-xs text-red-600 font-medium">{item.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}</span>
             </div>
           ) : null
         )}
@@ -72,7 +72,7 @@ export function InclusionExclusion({
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
                 {icons[item]}
               </div>
-              <span className="text-xs text-red-600 font-medium">{item.replace(/_/g, " ")}</span>
+              <span className="text-xs text-red-600 font-medium">{item.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}</span>
             </div>
           ) : null
         )}

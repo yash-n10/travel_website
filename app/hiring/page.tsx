@@ -21,6 +21,7 @@ export default function HiringPage() {
   const [jobs, setJobs] = useState<VacancyItem[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
+  const [resume, setResume] = useState<File | null>(null)
 
   const [form, setForm] = useState({
     name: "",
@@ -95,15 +96,23 @@ export default function HiringPage() {
     setSubmitting(true)
     setSubmitMsg(null)
     try {
+      const fd = new FormData()
+      fd.append("name", form.name)
+      fd.append("email", form.email)
+      fd.append("contact", form.contact)
+      fd.append("position", form.position)
+      fd.append("message", form.message)
+      if (resume) fd.append("resume", resume)
+
       const res = await fetch("/api/hiring", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: fd,
       })
       const text = await res.text()
       setSubmitMsg(res.ok ? "Application submitted successfully." : (text || "Failed to submit."))
       if (res.ok) {
         setForm({ name: "", email: "", contact: "", position: "", message: "" })
+        setResume(null)
       }
     } catch (e: any) {
       setSubmitMsg(e?.message || "An error occurred.")
@@ -185,6 +194,18 @@ export default function HiringPage() {
                     </select>
                   </div>
                   <div>
+                    <label className="block text-sm font-medium mb-1">Resume</label>
+                    <Input
+                      type="file"
+                      accept=".pdf,.doc,.docx"
+                      onChange={(e) => setResume(e.target.files?.[0] || null)}
+                      disabled={submitting}
+                    />
+                    {resume && (
+                      <p className="text-xs text-gray-600 mt-1">Selected: {resume.name}</p>
+                    )}
+                  </div>
+                  <div>
                     <label className="block text-sm font-medium mb-1">Message</label>
                     <Textarea name="message" value={form.message} onChange={handleChange} rows={4} disabled={submitting} />
                   </div>
@@ -207,3 +228,4 @@ export default function HiringPage() {
     </div>
   )
 }
+
