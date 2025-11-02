@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { X, MapPin, Users, Calendar, MessageSquare, Star, Heart, Globe, Award, Link } from 'lucide-react';
 
 import {Header} from '@/components/header';
@@ -10,6 +11,7 @@ import { LinkButton } from '@/components/ui/linkButton';
 export default function TravelWebsite() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const router = useRouter();
 
   const openPopup = () => setIsPopupOpen(true);
   const closePopup = () => setIsPopupOpen(false);
@@ -37,7 +39,7 @@ export default function TravelWebsite() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <LinkButton
               href="/contact"
-              className="bg-white text-red-600 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors inline-block text-center"
+              className="bg-red-600 text-white border border-white px-8 py-2.5 rounded font-semibold hover:bg-gray-100 transition-colors inline-block text-center"
             >
               Plan Your Trip
             </LinkButton>
@@ -93,7 +95,7 @@ export default function TravelWebsite() {
             immersion, GoSamyati Expeditions designs experiences that turn memories into 
             lifelong stories of growth and discovery.<br/><br/>
             <button 
-              onClick={openPopup}
+              onClick={() => router.push('/tours')}
               className="bg-red-600 text-white px-8 py-3 rounded font-semibold hover:bg-red-700 transition-colors"
             >
               Explore With Us
@@ -114,44 +116,43 @@ export default function TravelWebsite() {
 
       {/* What Drives Us Forward */}
       <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-[75rem] mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">What Drives Us Forward</h2>
-          <p className="text-gray-600 mb-12 text-justify text-balance">
+          <p className="text-gray-600 mb-12 text-center text-balance">
             Our values guide every decision we make as a tour organization on making the best
             travel experiences for our customers.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+            <div className="text-center p-3">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Authentic Experiences</h3>
-              <p className="text-gray-600 text-justify text-balance">
+              <p className="text-gray-600 text-center text-balance">
                 We believe in creating genuine connections with local cultures and communities,
-                ensuring every journey offers authentic and meaningful experiences that go beyond
-                typical tourist attractions.
+                ensuring every journey offers authentic and meaningful experiences.
               </p>
             </div>
             
-            <div className="text-center p-6">
+            <div className="text-center p-3">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Ethical practices</h3>
-              <p className="text-gray-600 text-justify text-balance">
+              <p className="text-gray-600 text-center text-balance">
                 We're committed to responsible tourism that respects local environments and
                 communities, ensuring our travel practices contribute positively to the
                 destinations we visit.
               </p>
             </div>
             
-            <div className="text-center p-6">
+            <div className="text-center p-3">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Excellence in Service</h3>
-              <p className="text-gray-600 text-justify text-balance">
+              <p className="text-gray-600 text-center text-balance">
                 From the moment you inquire about a trip to your safe return home, we're
                 dedicated to providing exceptional service that exceeds your expectations at
                 every step of your journey.
@@ -257,7 +258,7 @@ export default function TravelWebsite() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <LinkButton
               href="/contact"
-              className="bg-white text-red-600 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors inline-block text-center"
+              className="bg-red-600 text-white border border-white px-8 py-2 rounded font-semibold hover:bg-gray-100 transition-colors inline-block text-center"
             >
               Contact our team
             </LinkButton>

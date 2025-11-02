@@ -47,7 +47,7 @@ function TermsAndConditions() {
 
                     <div>
                         <h2 className="text-2xl font-semibold text-gray-900">Secure your Booking</h2>
-                        <p className="text-justify text-balance">
+                        <p className="text-justify text-balance leading-snug ">
                             To secure a booking, a minimum deposit is required for all tour packages. Sometimes a higher deposit may be
                             requested to cover payment conditions. You should read the booking conditions and general information of the
                             selected tour. Questions can be clarified via phone or email at{" "}
@@ -66,7 +66,7 @@ function TermsAndConditions() {
                         </p>
 
                         <h3 className="text-xl font-semibold mt-4 mb-2">Account Details</h3>
-                        <ul className="list-disc pl-6 space-y-1">
+                        <ul className="list-disc pl-6 space-y-0">
                             <li>Account No: 259820202020</li>
                             <li>Account Name: GoSamyati Expeditions PVT LTD</li>
                             <li>Account Type: Current</li>
@@ -96,7 +96,7 @@ function TermsAndConditions() {
                             Payments contribute to operational costs. Cancellation fees are charged to cover these expenses.
                         </p>
 
-                        <ul className="list-disc pl-6 space-y-2">
+                        <ul className="list-disc pl-6 space-y-0">
                             <li>Cancellations must be informed via email only.</li>
                             <li>Effective from the date and time we receive your mail.</li>
                             <li>No refunds on unused services once the tour begins.</li>

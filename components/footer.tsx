@@ -41,12 +41,12 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg xl:text-xl font-bold mb-3 sm:mb-4">ABOUT GOSAMYATI</h3>
             <ul className="space-y-2 text-sm xl:text-base">
-              <li><Link href="/about-us" className="hover:underline block py-1">About Us</Link></li>
-              <li><Link href="/hiring" className="hover:underline block py-1">We are Hiring</Link></li>
-              <li><Link href="#" className="hover:underline block py-1">Gosamyati Review</Link></li>
-              <li><Link href="/terms-and-conditions" className="hover:underline block py-1">Terms and Conditions</Link></li>
-              <li><Link href="/privacy-policy" className="hover:underline block py-1">Privacy Policies</Link></li>
-              <li><Link href="/contact" className="hover:underline block py-1">Support</Link></li>
+              <li><Link href="/about-us" className="hover:text-red-600 block py-1">About Us</Link></li>
+              <li><Link href="/hiring" className="hover:text-red-600 block py-1">We are Hiring</Link></li>
+              {/* <li><Link href="#" className="hover:text-red-600 block py-1">Gosamyati Review</Link></li> */}
+              <li><Link href="/terms-and-conditions" className="hover:text-red-600 block py-1">Terms and Conditions</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-red-600 block py-1">Privacy Policies</Link></li>
+              <li><Link href="/contact" className="hover:text-red-600 block py-1">Support</Link></li>
             </ul>
           </div>
 
@@ -78,35 +78,35 @@ export function Footer() {
 
         {/* CONTACT INFO */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm xl:text-base">
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left text-xl">
             <h4 className="font-semibold mb-1">Call Us</h4>
             {settings?.phone1 && <p className="break-all">{settings.phone1}</p>}
           </div>
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-center text-xl">
             <h4 className="font-semibold mb-1">Email Us</h4>
             {settings?.email && <p className="break-all">{settings.email}</p>}
           </div>
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-right">
             <h4 className="font-semibold mb-1">Follow Us</h4>
-            <div className="flex justify-center sm:justify-start space-x-4 mt-1">
+            <div className="flex justify-center sm:justify-end space-x-4 mt-1">
               {settings?.instagram && (
                 <a href={settings.instagram} target="_blank" rel="noopener noreferrer">
-                  <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                  <Instagram className="w-5 h-5 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                 </a>
               )}
               {settings?.google && (
                 <a href={settings.google} target="_blank" rel="noopener noreferrer">
-                    <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                    <FaGoogle className="w-5 h-6 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                 </a>
               )}
               {settings?.whatsapp && (
                 <a href={settings.whatsapp} target="_blank" rel="noopener noreferrer">
-                    <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                    <FaWhatsapp className="w-5 h-5 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                 </a>
               )}
               {settings?.linkedin && (
                 <a href={settings.linkedin} target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                  <Linkedin className="w-5 h-5 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                 </a>
               )}
               

@@ -48,10 +48,10 @@ export function InclusionExclusion({
     <div className="mb-6">
       {/* Inclusion Section */}
       <h3 className="text-lg font-bold text-red-600 mb-3">INCLUSION</h3>
-      <div className="flex flex-wrap gap-8 justify-start mb-6">
+      <div className="flex flex-wrap gap-16 justify-start mb-6">
         {inclusion.map((item, index) =>
           icons[item] ? (
-            <div key={`inclusion-${index}`} className="text-center">
+            <div key={`inclusion-${index}`} className="text-center w-24">
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
                 {icons[item]}
               </div>
@@ -65,10 +65,10 @@ export function InclusionExclusion({
 
       {/* Exclusion Section */}
       <h3 className="text-lg font-bold text-red-600 mb-3">EXCLUSION</h3>
-      <div className="flex flex-wrap gap-8 justify-start">
+      <div className="flex flex-wrap gap-16 justify-start">
         {exclusion.map((item, index) =>
           icons[item] ? (
-            <div key={`exclusion-${index}`} className="text-center">
+            <div key={`exclusion-${index}`} className="text-center w-24">
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
                 {icons[item]}
               </div>

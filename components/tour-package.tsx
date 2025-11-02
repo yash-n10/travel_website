@@ -9,6 +9,7 @@ import { TourRedirectButton } from "@/components/tour-redirect-button"
 import { TourPackage } from "@/types/index"
 import { slugify } from "@/utils/slugify"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 interface TourPackagesSectionProps {
   title: string
@@ -26,6 +27,7 @@ export function TourPackagesSection({
   fallbackPackages
 }: TourPackagesSectionProps) {
   const [selectedTourId, setSelectedTourId] = useState<string | number | null>(null)
+  const router = useRouter()
 
   const renderPackageCards = () => {
     if (isLoading) {
@@ -49,14 +51,21 @@ export function TourPackagesSection({
         console.warn(`Skipping tour package with missing ID or title`, pkg)
         return null
       }
+      const href = `/tour?id=${encodeURIComponent(pkg.id.toString())}${
+        pkg.title ? `&title=${encodeURIComponent(slugify(pkg.title))}` : ''
+      }`
       return (
-           <Card key={pkg.id} className="overflow-hidden bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
+           <Card 
+            key={pkg.id} 
+            className="overflow-hidden bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow h-full flex flex-col cursor-pointer"
+            onClick={() => router.push(href)}
+          >
           <div className="relative h-60 sm:h-60 md:h-40 lg:h-72">
             <Image 
               src={pkg.image1 || "/images/default-tour.jpg"} 
               alt={pkg.title || "Tour package"}
               fill
-              className="object-cover"
+              className="object-cover hover:scale-110 transition-transform duration-200"
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
               priority={false}
             />
@@ -77,15 +86,17 @@ export function TourPackagesSection({
               {pkg.price || "Price not available"}
             </p>
             <div className="mt-auto">
-              <TourRedirectButton
-                tourId={pkg.id}
-                tourTitle={pkg.title}
-                variant="default"
-                size="sm"
-                className="w-full bg-red-600 hover:bg-red-700 text-white"
-                showIcon={true}
-                onTourSelect={setSelectedTourId}
-              />
+              <div onClick={(e) => e.stopPropagation()}>
+                <TourRedirectButton
+                  tourId={pkg.id}
+                  tourTitle={pkg.title}
+                  variant="default"
+                  size="sm"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white"
+                  showIcon={true}
+                  onTourSelect={setSelectedTourId}
+                />
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -104,7 +115,7 @@ export function TourPackagesSection({
           <h2 className="text-lg sm:text-3xl font-bold text-gray-900">{title}</h2>
 
           {!isLoading && (
-            <Link  href="/tours" className="text-red-600 hover:underline flex items-center text-sm sm:text-sm transition-colors" prefetch={false}>View all <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
+            <Link  href="/tours" className="text-red-600 z-50 hover:underline flex items-center text-sm sm:text-sm transition-colors" prefetch={false}>View all <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
             </Link>
           )}
         </div>

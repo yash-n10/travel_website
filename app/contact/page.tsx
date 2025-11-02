@@ -181,22 +181,22 @@ export default function ContactPage() {
                 <div className="flex space-x-4">
                   {settings?.instagram && (
                     <a href={settings.instagram} target="_blank" rel="noopener noreferrer">
-                      <Instagram className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                      <Instagram className="w-5 h-5 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                     </a>
                   )}
                   {settings?.google && (
                     <a href={settings.google} target="_blank" rel="noopener noreferrer">
-                      <FaGoogle className="w-5 h-6 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                      <FaGoogle className="w-5 h-6 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                     </a>
                   )}
                   {settings?.whatsapp && (
                     <a href={settings.whatsapp} target="_blank" rel="noopener noreferrer">
-                      <FaWhatsapp className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                      <FaWhatsapp className="w-5 h-5 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                     </a>
                   )}
                   {settings?.linkedin && (
                     <a href={settings.linkedin} target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="w-5 h-5 xl:w-6 xl:h-6 text-red-600 hover:text-red-800 cursor-pointer" />
+                      <Linkedin className="w-5 h-5 xl:w-10 xl:h-10 text-red-600 hover:text-red-800 cursor-pointer" />
                     </a>
                   )}
                 </div>

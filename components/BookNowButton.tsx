@@ -56,7 +56,7 @@ export const BookNowButton: React.FC<BookNowButtonProps> = ({
 
       // 1) Create order on backend
       const orderRes = await axios.post(
-        'http://localhost:5001/create-order',
+        'https://travel-website-backend-beta.vercel.app/create-order',
         { amount, currency }
       );
       console.log('Order response:', orderRes.data);
@@ -72,7 +72,7 @@ export const BookNowButton: React.FC<BookNowButtonProps> = ({
       console.log('Using order_id:', order_id, 'amount(paise):', paiseAmount);
 
       // 2) Configure Razorpay: fetch public key from backend to avoid env mismatch
-      const keyResp = await axios.get('http://localhost:5001/public-key');
+      const keyResp = await axios.get('https://travel-website-backend-beta.vercel.app/public-key');
       const keyId = keyResp?.data?.key;
       if (!keyId) {
         console.error('Razorpay key missing from backend /public-key');
@@ -89,7 +89,7 @@ export const BookNowButton: React.FC<BookNowButtonProps> = ({
         order_id,
         handler: async (resp: any) => {
           await axios.post(
-            'http://localhost:5001/payment-success-email',
+            'https://travel-website-backend-beta.vercel.app/payment-success-email',
             {
               studentName: userDetails.name,
               studentEmail: userDetails.email,

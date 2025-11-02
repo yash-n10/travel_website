@@ -55,7 +55,7 @@ export function HeroSection({
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-all duration-300"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-all duration-100"
       >
         <svg
           className="w-5 h-5"
@@ -71,7 +71,7 @@ export function HeroSection({
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-all duration-300"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center z-30 transition-all duration-100"
       >
         <svg
           className="w-5 h-5"
@@ -90,7 +90,7 @@ export function HeroSection({
           <button
             key={index}
             onClick={() => setCurrentHeroSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 shadow-lg border border-white/30 ${
+            className={`w-3 h-3 rounded-full transition-all duration-100 shadow-lg border border-white/30 ${
               index === currentHeroSlide
                 ? "bg-white scale-125 shadow-white/50"
                 : "bg-white/50 hover:bg-white/75 hover:scale-110"
@@ -102,7 +102,7 @@ export function HeroSection({
       {/* Scroll to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 z-50 border-2 border-white/20"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-100 hover:scale-110 z-50 border-2 border-white/20"
       >
         <svg
           className="lucide lucide-arrow-up w-5 h-5"
