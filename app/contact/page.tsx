@@ -402,34 +402,93 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">How far in advance should I book my tour?</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">How do I make a booking or reservation?</h3>
                   <p className="text-gray-600">
-                    We recommend booking at least 2-4 weeks in advance for domestic tours and 6-8 weeks for
-                    international destinations to ensure availability and better rates.
+                    You can call us to curate your itinerary and book your holiday.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What is included in the tour packages?</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Is my booking confirmed immediately?</h3>
                   <p className="text-gray-600">
-                    Our packages typically include accommodation, transportation, guided tours, and some meals. Specific
-                    inclusions vary by package and are detailed in each tour description.
+                    Yes, after the initial payment, we will share a confirmation email with you.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Do you offer customized tour packages?</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Can I make changes to my booking after it's confirmed?</h3>
                   <p className="text-gray-600">
-                    Yes! We specialize in creating personalized itineraries based on your preferences, budget, and
-                    travel dates. Contact us to discuss your requirements.
+                    We will try our best to help with any modifications to your booking.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What is your cancellation policy?</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">How do I verify my booking?</h3>
                   <p className="text-gray-600">
-                    Cancellation policies vary by tour and booking date. Generally, cancellations made 30+ days in
-                    advance receive full refunds, while later cancellations may incur fees.
+                    You can verify your booking directly with the hotels using the confirmation number provided by us.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">What forms of payment do you accept?</h3>
+                  <p className="text-gray-600">
+                    We accept all major payment modes through secure payment gateways.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Are there any hidden fees?</h3>
+                  <p className="text-gray-600">
+                    No, there are no hidden charges.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Do you offer payment plans or installment options?</h3>
+                  <p className="text-gray-600">
+                    Yes, we offer EMI options and flexible payment plans.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Can I change my travel dates?</h3>
+                  <p className="text-gray-600">
+                    Yes, you can change your travel dates with a minimum fee, subject to hotel and transportation availability on the new dates.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">When will I receive my final travel documents and itinerary?</h3>
+                  <p className="text-gray-600">
+                    You will receive your travel vouchers and final itinerary within 3 days of making the initial payment.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Who do I contact in case of an emergency during my trip?</h3>
+                  <p className="text-gray-600">
+                    We have an on-ground support team available 24x7 to assist you during your trip.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Can you accommodate dietary restrictions (e.g., vegetarian, gluten-free, allergies)?</h3>
+                  <p className="text-gray-600">
+                    Yes, we can accommodate dietary restrictions such as vegetarian, gluten-free, and allergies. Please share your requirements with us in advance.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Do you offer trips suitable for people with mobility issues or disabilities?</h3>
+                  <p className="text-gray-600">
+                    Yes, we offer trips that are suitable for people with mobility issues or disabilities.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Can I request a specific room type (e.g., non-smoking, king bed, ocean view)?</h3>
+                  <p className="text-gray-600">
+                    Yes, you can request a specific room category such as non-smoking, king bed, or ocean view, and we will do our best to arrange it.
                   </p>
                 </div>
               </div>
