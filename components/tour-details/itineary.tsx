@@ -94,9 +94,11 @@ export function Itinerary({ tourId }: ItineraryProps) {
                 onOpenChange={(open) => setOpenDay(open ? day.day : null)}
               >
                 <CollapsibleTrigger className="flex items-center justify-between w-full p-3 bg-red-600 text-white text-sm font-semibold hover:bg-red-700 transition-colors">
-                  <span>
-                    {day.day} : {day.title}
-                  </span>
+                  <div className="flex items-center gap-2 text-left">
+                    <span dangerouslySetInnerHTML={{ __html: day.day || "<p>DAY</p>" }} />
+                    <span>:</span>
+                    <span dangerouslySetInnerHTML={{ __html: day.title || "<p>Details</p>" }} />
+                  </div>
                   {openDay === day.day ? (
                     <ChevronUp className="w-4 h-4" />
                   ) : (
@@ -104,9 +106,10 @@ export function Itinerary({ tourId }: ItineraryProps) {
                   )}
                 </CollapsibleTrigger>
                 <CollapsibleContent className="p-3 bg-gray-50 border border-t-0 text-sm">
-                  <p className="text-gray-700 leading-relaxed">
-                    {day.content || "No details available."}
-                  </p>
+                  <div
+                    className="text-gray-700 leading-relaxed space-y-2"
+                    dangerouslySetInnerHTML={{ __html: day.content || "<p>No details available.</p>" }}
+                  />
                 </CollapsibleContent>
               </Collapsible>
             ))
