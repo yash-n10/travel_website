@@ -55,13 +55,13 @@ export function PolicyAccordion() {
           </CollapsibleTrigger>
           <CollapsibleContent className="p-3 bg-white border-t text-sm">
             {Array.isArray(policy.content) ? (
-              <ul className="list-disc pl-5 text-gray-600 space-y-1">
+              <ul className="list-disc pl-5 text-gray-600 space-y-1 marker:text-red-600">
                 {policy.content.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
               </ul>
             ) : (
-              <p className="text-gray-600">{policy.content}</p>
+              <p className="text-gray-600 marker:text-red-600">{policy.content}</p>
             )}
           </CollapsibleContent>
         </Collapsible>

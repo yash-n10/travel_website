@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Check, Linkedin, Instagram, Send } from "lucide-react"
+import { Phone, Mail, MapPin, Check, Linkedin, Instagram, Send, ChevronDown, ChevronUp } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FaWhatsapp,FaGoogle } from "react-icons/fa";
@@ -43,6 +43,62 @@ export default function ContactPage() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
+
+  const faqs = [
+    {
+      question: "How do I make a booking or reservation?",
+      answer: "You can call us to curate your itinerary and book your holiday.",
+    },
+    {
+      question: "Is my booking confirmed immediately?",
+      answer: "Yes, after the initial payment, we will share a confirmation email with you.",
+    },
+    {
+      question: "Can I make changes to my booking after it's confirmed?",
+      answer: "We will try our best to help with any modifications to your booking.",
+    },
+    {
+      question: "How do I verify my booking?",
+      answer: "You can verify your booking directly with the hotels using the confirmation number provided by us.",
+    },
+    {
+      question: "What forms of payment do you accept?",
+      answer: "We accept all major payment modes through secure payment gateways.",
+    },
+    {
+      question: "Are there any hidden fees?",
+      answer: "No, there are no hidden charges.",
+    },
+    {
+      question: "Do you offer payment plans or installment options?",
+      answer: "Yes, we offer EMI options and flexible payment plans.",
+    },
+    {
+      question: "Can I change my travel dates?",
+      answer: "Yes, you can change your travel dates with a minimum fee, subject to hotel and transportation availability on the new dates.",
+    },
+    {
+      question: "When will I receive my final travel documents and itinerary?",
+      answer: "You will receive your travel vouchers and final itinerary within 3 days of making the initial payment.",
+    },
+    {
+      question: "Who do I contact in case of an emergency during my trip?",
+      answer: "We have an on-ground support team available 24x7 to assist you during your trip.",
+    },
+    {
+      question: "Can you accommodate dietary restrictions (e.g., vegetarian, gluten-free, allergies)?",
+      answer: "Yes, we can accommodate dietary restrictions such as vegetarian, gluten-free, and allergies. Please share your requirements with us in advance.",
+    },
+    {
+      question: "Do you offer trips suitable for people with mobility issues or disabilities?",
+      answer: "Yes, we offer trips that are suitable for people with mobility issues or disabilities.",
+    },
+    {
+      question: "Can I request a specific room type (e.g., non-smoking, king bed, ocean view)?",
+      answer: "Yes, you can request a specific room category such as non-smoking, king bed, or ocean view, and we will do our best to arrange it.",
+    },
+  ]
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -400,97 +456,32 @@ export default function ContactPage() {
           <Card>
             <CardContent className="p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">How do I make a booking or reservation?</h3>
-                  <p className="text-gray-600">
-                    You can call us to curate your itinerary and book your holiday.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Is my booking confirmed immediately?</h3>
-                  <p className="text-gray-600">
-                    Yes, after the initial payment, we will share a confirmation email with you.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Can I make changes to my booking after it's confirmed?</h3>
-                  <p className="text-gray-600">
-                    We will try our best to help with any modifications to your booking.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">How do I verify my booking?</h3>
-                  <p className="text-gray-600">
-                    You can verify your booking directly with the hotels using the confirmation number provided by us.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What forms of payment do you accept?</h3>
-                  <p className="text-gray-600">
-                    We accept all major payment modes through secure payment gateways.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Are there any hidden fees?</h3>
-                  <p className="text-gray-600">
-                    No, there are no hidden charges.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Do you offer payment plans or installment options?</h3>
-                  <p className="text-gray-600">
-                    Yes, we offer EMI options and flexible payment plans.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Can I change my travel dates?</h3>
-                  <p className="text-gray-600">
-                    Yes, you can change your travel dates with a minimum fee, subject to hotel and transportation availability on the new dates.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">When will I receive my final travel documents and itinerary?</h3>
-                  <p className="text-gray-600">
-                    You will receive your travel vouchers and final itinerary within 3 days of making the initial payment.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Who do I contact in case of an emergency during my trip?</h3>
-                  <p className="text-gray-600">
-                    We have an on-ground support team available 24x7 to assist you during your trip.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Can you accommodate dietary restrictions (e.g., vegetarian, gluten-free, allergies)?</h3>
-                  <p className="text-gray-600">
-                    Yes, we can accommodate dietary restrictions such as vegetarian, gluten-free, and allergies. Please share your requirements with us in advance.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Do you offer trips suitable for people with mobility issues or disabilities?</h3>
-                  <p className="text-gray-600">
-                    Yes, we offer trips that are suitable for people with mobility issues or disabilities.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Can I request a specific room type (e.g., non-smoking, king bed, ocean view)?</h3>
-                  <p className="text-gray-600">
-                    Yes, you can request a specific room category such as non-smoking, king bed, or ocean view, and we will do our best to arrange it.
-                  </p>
-                </div>
+              <div className="space-y-3">
+                {faqs.map((faq, index) => {
+                  const isOpen = openFaqIndex === index
+                  return (
+                    <div key={faq.question} className="border border-gray-200 rounded-lg">
+                      <button
+                        type="button"
+                        className="w-full flex items-center justify-between p-4 text-left"
+                        onClick={() => setOpenFaqIndex((prev) => (prev === index ? null : index))}
+                        aria-expanded={isOpen}
+                      >
+                        <span className="font-semibold text-gray-900">{faq.question}</span>
+                        {isOpen ? (
+                          <ChevronUp className="w-5 h-5 text-red-600" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-red-600" />
+                        )}
+                      </button>
+                      {isOpen && (
+                        <div className="px-4 pb-4 text-gray-600 text-sm border-t border-gray-100">
+                          <p>{faq.answer}</p>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             </CardContent>
           </Card>
