@@ -76,6 +76,7 @@ function processTourPackage(item: any): TourPackage {
     nights: ensureString(item.nights, '0'),
     price: formatPrice(item.price),
     basic_info: ensureString(item.basic_info, 'No basic info available'),
+    final_info: optionalString(item.final_info),
     image1: processMainImageUrl(item.image1),
     image2: processOptionalImageUrl(item.image2),
     image3: processOptionalImageUrl(item.image3),

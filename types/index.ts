@@ -7,6 +7,7 @@ export type TourPackage = {
   nights: string;
   price: string;
   basic_info: string;
+  final_info?: string;
   image1: string;
   image2?: string;
   image3?: string;

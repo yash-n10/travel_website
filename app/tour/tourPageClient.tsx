@@ -180,16 +180,23 @@ export default function TourPageClient() {
 
             <div className="mb-6">
               <h3 className="text-lg font-bold text-red-600 mb-3">KNOW BEFORE YOU GO</h3>
-              <ul className="space-y-2 text-sm text-red-600">
-                <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Check visa requirements well in advance of your travel date.
-                </li>
-                <li className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Local currency is recommended for small purchases and tips.
-                </li>
-              </ul>
+              {tourPackage.final_info ? (
+                <div
+                  className="text-sm text-red-600 space-y-2"
+                  dangerouslySetInnerHTML={{ __html: tourPackage.final_info }}
+                />
+              ) : (
+                <ul className="space-y-2 text-sm text-red-600">
+                  <li className="flex items-start">
+                    <span className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Check visa requirements well in advance of your travel date.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Local currency is recommended for small purchases and tips.
+                  </li>
+                </ul>
+              )}
             </div>
             <PolicyAccordion />
               <br/>
