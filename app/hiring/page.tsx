@@ -145,13 +145,13 @@ export default function HiringPage() {
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h2 className="text-lg font-normal"> <span className="font-semibold">Job Id- </span>{String(job.id ?? idx)} </h2>
+                      {/* <h2 className="text-lg font-normal"> <span className="font-semibold">Job Id- </span>{String(job.id ?? idx)} </h2> */}
                       <h2 className="text-xl font-normal"> <span className="font-semibold">Job Title- </span>{job.title || job.position || 'Position'}</h2>
                     </div>
                     <Button onClick={() => handleSelectJob(String(job.id ?? job.title ?? idx))}>Apply</Button>
                   </div>
                   {job.description && (
-                    <p className="text-gray-700 mt-4 whitespace-pre-wrap">{job.description}</p>
+                    <p className="text-gray-700 mt-0 whitespace-pre-wrap">{job.description}</p>
                   )}
                 </CardContent>
               </Card>
