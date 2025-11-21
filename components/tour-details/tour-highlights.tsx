@@ -74,7 +74,7 @@ export function TourHighlights({ tourId }: TourHighlightsProps) {
                 }`}
               />
             ))}
-            <span className="ml-2 text-sm text-gray-600">({tour.review} Package)</span>
+            {/* <span className="ml-2 text-sm text-gray-600">({tour.review} Package)</span> */}
           </div>
 
           <p className="text-gray-700 leading-relaxed text-sm mb-4 border border-red-500 p-4 rounded-lg">

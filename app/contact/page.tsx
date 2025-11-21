@@ -201,8 +201,17 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5 text-red-600 mr-3 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      {settings?.phone1 && (
-                        <p className="text-gray-600">{settings.phone1}</p>
+                      {settings && (
+                        Object.entries(settings)
+                          .filter(([key, value]) => /^phone\d*$/i.test(key) && value)
+                          .sort((a, b) => {
+                            const na = parseInt(a[0].replace(/^[^0-9]*/, "")) || 0
+                            const nb = parseInt(b[0].replace(/^[^0-9]*/, "")) || 0
+                            return na - nb
+                          })
+                          .map(([key, value]) => (
+                            <p key={key} className="text-gray-600">{String(value)}</p>
+                          ))
                       )}
                     </div>
                   </div>
