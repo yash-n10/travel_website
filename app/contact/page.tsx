@@ -171,6 +171,13 @@ export default function ContactPage() {
     }
   }
 
+  const inputClasses = (value: string) =>
+    `w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none disabled:opacity-50 ${
+      value?.trim()
+        ? 'border-green-500 focus:ring-2 focus:ring-green-500 focus:border-green-500'
+        : 'border-red-500 focus:ring-2 focus:ring-red-500 focus:border-red-500'
+    }`
+
   return (
     <div className="min-h-screen bg-white w-screen">
       <Header 
@@ -306,7 +313,7 @@ export default function ContactPage() {
                             onChange={handleInputChange}
                             required
                             disabled={isSubmitting}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
+                            className={inputClasses(formData.firstName)}
                             placeholder="Enter your first name"
                           />
                         </div>
@@ -322,7 +329,7 @@ export default function ContactPage() {
                             value={formData.lastName}
                             onChange={handleInputChange}
                             disabled={isSubmitting}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
+                            className={inputClasses(formData.lastName)}
                             placeholder="Enter your last name"
                           />
                         </div>
@@ -340,7 +347,7 @@ export default function ContactPage() {
                           onChange={handleInputChange}
                           required
                           disabled={isSubmitting}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
+                          className={inputClasses(formData.email)}
                           placeholder="Enter your email address"
                         />
                       </div>
@@ -356,7 +363,7 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={handleInputChange}
                           disabled={isSubmitting}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
+                          className={inputClasses(formData.phone)}
                           placeholder="+1 (555) 123-4567"
                         />
                       </div>
@@ -372,7 +379,7 @@ export default function ContactPage() {
                           value={formData.preferredDestination}
                           onChange={handleInputChange}
                           disabled={isSubmitting}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
+                          className={inputClasses(formData.preferredDestination)}
                           placeholder="Where would you like to go?"
                         />
                       </div>
@@ -389,7 +396,7 @@ export default function ContactPage() {
                             value={formData.departureDate}
                             onChange={handleInputChange}
                             disabled={isSubmitting}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
+                            className={inputClasses(formData.departureDate)}
                           />
                         </div>
 
@@ -404,7 +411,7 @@ export default function ContactPage() {
                             value={formData.returnDate}
                             onChange={handleInputChange}
                             disabled={isSubmitting}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 disabled:opacity-50"
+                            className={inputClasses(formData.returnDate)}
                           />
                         </div>
                       </div>
