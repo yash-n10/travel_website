@@ -172,14 +172,14 @@ export function ImageSlider({
 
         {/* Overlay and info */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-        <div className="absolute bottom-6 left-6 z-20 text-white">
+        {/* <div className="absolute bottom-6 left-6 z-20 text-white">
           <h1 className="text-2xl md:text-3xl font-bold drop-shadow-lg">{title}</h1>
           {duration && (
             <p className="text-lg md:text-xl font-medium drop-shadow-md">
               {duration}
             </p>
           )}
-        </div>
+        </div> */}
 
         {/* Navigation controls */}
         {images.length > 1 && (
