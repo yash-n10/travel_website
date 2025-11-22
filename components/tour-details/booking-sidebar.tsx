@@ -16,6 +16,7 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
   const [price, setPrice] = useState<string>("")
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
+  const [settings, setSettings] = useState<any>(null)
 
   useEffect(() => {
     const loadTourPrice = async () => {
@@ -45,6 +46,20 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
 
     loadTourPrice()
   }, [tourId])
+
+  useEffect(() => {
+    const run = async () => {
+      try {
+        const res = await fetch('/api/site-settings', { cache: 'no-store' })
+        const text = await res.text()
+        let out: any = text
+        try { out = JSON.parse(text) } catch {}
+        setSettings(out?.data ?? out ?? null)
+      } catch (e) {
+      }
+    }
+    run()
+  }, [])
 
   return (
     <div className=" top-2 space-y-2">
@@ -92,11 +107,17 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
         <div className="space-y-3 text-sm">
           <div className="flex items-center">
             <Phone className="w-4 h-4 text-red-600 mr-3" />
-            <span className="text-gray-700">+91 9540882200 </span>
+            <span className="text-gray-700">{settings?.phone1 || ''} </span>
           </div>
+          {settings?.phone2 ? (
+            <div className="flex items-center">
+              <Phone className="w-4 h-4 text-red-600 mr-3" />
+              <span className="text-gray-700">{settings.phone2}</span>
+            </div>
+          ) : null}
           <div className="flex items-center">
             <Mail className="w-4 h-4 text-red-600 mr-3" />
-            <span className="text-gray-700">info@gosamyati.com</span>
+            <span className="text-gray-700">{settings?.email || ''}</span>
           </div>
         </div>
       </div>

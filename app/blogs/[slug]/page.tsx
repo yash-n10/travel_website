@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
-import { Calendar, Clock, User, ArrowLeft, Loader2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -265,20 +265,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             {blog.title}
           </h1>
 
-          <div className="flex items-center gap-4 mb-8 p-4 bg-gray-50 rounded-lg">
-            {blog.authorImage ? (
-              <Image
-                src={blog.authorImage}
-                alt={blog.author}
-                width={40}
-                height={40}
-                className="w-10 h-10 rounded-full object-cover"
-              />
-            ) : (
-              <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
-                <User className="w-5 h-5 text-white" />
-              </div>
-            )}
+          <div className="flex items-center gap-4 mb-8 pl-0 p-4 bg-gray-50 rounded-lg">
             <div>
               <div className="flex items-center text-sm text-gray-600">
                 <span className="font-medium text-gray-900">By {blog.author}</span>

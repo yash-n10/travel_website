@@ -42,6 +42,7 @@ export type Testimonial = {
   text: string;
   rating?: number;
   image?: string;
+  gender?: "male" | "female";
 };
 
 export type HeroSlide = {

@@ -5,16 +5,21 @@ import { Quote } from "lucide-react"
 import { Testimonial } from "@/types/index"
 import { useEffect, useMemo } from "react"
 
-const staticAvatarImages = [
-  "/images/profile.jpeg",
-  "/images/profile2.jpeg",
-  "/images/profile3.jpeg",
-  "/images/profile4.jpeg",
+const staticMaleImages = [
   "/images/profile.jpeg",
   "/images/profile2.jpeg",
   "/images/profile3.jpeg",
   "/images/profile4.jpeg",
 ]
+
+const staticFemaleImages = [
+  "/images/avatar1.jpg",
+  "/images/avatar2.jpg",
+  "/images/avatar3.jpg",
+  "/images/avatar4.jpg",
+]
+
+const staticAvatarImages = [...staticMaleImages, ...staticFemaleImages]
 
 export function TestimonialsSection({
   testimonials,
@@ -36,11 +41,13 @@ export function TestimonialsSection({
     return () => clearInterval(interval)
   }, [testimonials.length, setCurrentTestimonial])
 
-  // Get a random fallback image for the current testimonial
+  // Get a random fallback image for the current testimonial, based on gender
   const randomFallbackImage = useMemo(() => {
-    const randomIndex = Math.floor(Math.random() * staticAvatarImages.length)
-    return staticAvatarImages[randomIndex]
-  }, [currentTestimonial])
+    const gender = testimonials[currentTestimonial]?.gender?.toLowerCase()
+    const pool = gender === 'male' ? staticMaleImages : gender === 'female' ? staticFemaleImages : staticAvatarImages
+    const randomIndex = Math.floor(Math.random() * pool.length)
+    return pool[randomIndex]
+  }, [currentTestimonial, testimonials])
 
   return (
     <section className="w-full py-20 bg-white relative overflow-hidden">

@@ -43,7 +43,7 @@ export default function ContactPage() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   const faqs = [
     {
