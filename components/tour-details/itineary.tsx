@@ -66,13 +66,13 @@ export function Itinerary({ tourId }: ItineraryProps) {
   return (
     <>
       {/* Highlights Section */}
-      <div className="mb-6">
+      <div className="mb-6 border border-red-500 rounded-lg p-4">
         <h2 className="text-lg font-bold text-red-600 mb-3">HIGHLIGHTS</h2>
         {highlights.length > 0 ? (
           <ul className="list-disc pl-4 text-gray-700 text-sm marker:text-red-600">
             {highlights.map((point, index) => (
               
-              <li key={`highlight-${index}`} dangerouslySetInnerHTML={{ __html: point }} className="w-[900px] break-words text-justify"></li>
+              <li key={`highlight-${index}`} dangerouslySetInnerHTML={{ __html: point }} className="w-full break-words text-justify"></li>
               // <li key={`highlight-${index}`}>{point}</li>
             ))}
           </ul>
@@ -93,7 +93,7 @@ export function Itinerary({ tourId }: ItineraryProps) {
                 open={openDay === day.day}
                 onOpenChange={(open) => setOpenDay(open ? day.day : null)}
               >
-                <CollapsibleTrigger className="flex items-center justify-between w-full p-3 bg-red-600 text-white text-sm font-semibold hover:bg-red-700 transition-colors">
+                <CollapsibleTrigger className="flex items-center justify-between w-full p-3 bg-red-600 rounded-2xl text-white text-sm font-semibold hover:bg-red-700 transition-colors">
                   <div className="flex items-center gap-2 text-left">
                     <span dangerouslySetInnerHTML={{ __html: day.day || "<p>DAY</p>" }} />
                     <span>:</span>
@@ -105,9 +105,9 @@ export function Itinerary({ tourId }: ItineraryProps) {
                     <ChevronDown className="w-4 h-4" />
                   )}
                 </CollapsibleTrigger>
-                <CollapsibleContent className="p-3 bg-gray-50 border border-t-0 text-sm">
+                <CollapsibleContent className="p-3 bg-gray-50 border border-red-600 border-t-0 rounded-2xl text-sm">
                   <div
-                    className="text-gray-700 leading-relaxed space-y-2 [&_ul]:list-disc [&_ul]:pl-5 [&_li::marker]:text-red-600"
+                    className="text-gray-700 leading-relaxed space-y-2 [&_ul]:list-disc [&_ul]:pl-5 [&_li::marker]:text-black"
                     dangerouslySetInnerHTML={{ __html: day.content || "<p>No details available.</p>" }}
                   />
                 </CollapsibleContent>

@@ -77,7 +77,7 @@ export function TourHighlights({ tourId }: TourHighlightsProps) {
             {/* <span className="ml-2 text-sm text-gray-600">({tour.review} Package)</span> */}
           </div>
 
-          <p className="text-gray-700 leading-relaxed text-sm text-justify mb-4 border border-red-500 p-4 rounded-lg w-full">
+          <p className="text-gray-700 leading-relaxed text-sm text-justify border border-red-500 p-4 rounded-lg w-full">
             {tour.basic_info || "Explore this amazing destination with our expertly crafted tour package."}
           </p>
         </div>
