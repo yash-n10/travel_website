@@ -45,7 +45,7 @@ export function PolicyAccordion() {
           open={openPolicy === policy.id}
           onOpenChange={(open) => setOpenPolicy(open ? policy.id : null)}
         >
-          <CollapsibleTrigger className="flex items-center justify-between w-full p-3 bg-white border rounded shadow-sm hover:shadow-md transition-shadow">
+          <CollapsibleTrigger className="flex items-center justify-between w-full p-3 bg-white border border-red-600 rounded-2xl shadow-sm hover:shadow-md ">
             <h3 className="text-sm font-semibold text-red-600">{policy.title}</h3>
             {openPolicy === policy.id ? (
               <ChevronUp className="w-4 h-4 text-red-600" />
@@ -53,7 +53,7 @@ export function PolicyAccordion() {
               <ChevronDown className="w-4 h-4 text-red-600" />
             )}
           </CollapsibleTrigger>
-          <CollapsibleContent className="p-3 bg-white border-t text-sm">
+          <CollapsibleContent className="p-3 bg-white border border-red-600 border-t-0 rounded-2xl text-sm">
             {Array.isArray(policy.content) ? (
               <ul className="list-disc pl-5 text-gray-600 space-y-1 marker:text-red-600">
                 {policy.content.map((point, index) => (

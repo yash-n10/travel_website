@@ -364,7 +364,7 @@ export default function ContactPage() {
                           onChange={handleInputChange}
                           disabled={isSubmitting}
                           className={inputClasses(formData.phone)}
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+91 1234567890"
                         />
                       </div>
 

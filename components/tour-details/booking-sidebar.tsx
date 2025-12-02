@@ -62,10 +62,10 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
   }, [])
 
   return (
-    <div className=" top-2 space-y-2">
+    <div className=" mt-[100px] space-y-2">
       {/* Price Card */}
-      <div className="bg-white border rounded-lg p-4 shadow-sm">
-        <div className="border rounded-md p-4">
+      <div className="bg-white border border-red-600 rounded-lg p-4 shadow-sm">
+        <div className=" ">
           <h3 className="text-sm font-bold text-red-600 mb-4 text-center">Starts from</h3>
           <div className="space-y-4">
             <div className="text-center">
@@ -102,7 +102,7 @@ export function BookingSidebar({ tourId }: BookingSidebarProps) {
       </div>
 
       {/* Help Card */}
-      <div className="bg-white border rounded-lg p-4 shadow-sm">
+      <div className="bg-white border border-red-600 rounded-lg p-4 shadow-sm">
         <h3 className="text-sm font-bold text-red-600 mb-4 text-center">Need Help?</h3>
         <div className="space-y-3 text-sm">
           <div className="flex items-center">

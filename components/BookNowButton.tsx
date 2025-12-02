@@ -181,7 +181,7 @@ export const BookNowButton: React.FC<BookNowButtonProps> = ({
     <>
       <button
         onClick={openDialog}
-        className="w-full flex items-center justify-center bg-red-600 hover:bg-red-700 text-white py-3 text-sm font-semibold"
+        className="w-full flex items-center justify-center rounded bg-red-600 hover:bg-red-700 text-white py-3 text-sm font-semibold"
       >
         Book Now <ChevronRight className="ml-2" />
       </button>

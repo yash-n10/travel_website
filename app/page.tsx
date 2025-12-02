@@ -43,16 +43,16 @@ const fallbackTestimonials = [
 
 const heroSlides: HeroSlide[] = [
   {
-    image: "/images/new_slide1.jpg",
+    image: "/images/M1.jpg",
     categories: [
-      { name: "Heritage", image: "/images/new_slide1.jpg" },
+      { name: "Heritage", image: "/images/M1.jpg" },
       { name: "Cities", image: "/images/new_slide2.jpg" },
       { name: "Beach", image: "/images/new_slide3.jpg" },
 
     ],
   },
   {
-    image: "/images/new_slide2.jpg",
+    image: "/images/varanasi1.jpg",
     categories: [
       { name: "Cities", image: "/images/new_slide2.jpg" },
       { name: "Heritage", image: "/images/new_slide3.jpg" },
@@ -62,7 +62,7 @@ const heroSlides: HeroSlide[] = [
   },
  
   {
-    image: "/images/new_slide3.jpg",
+    image: "/images/AA11.jpg",
     categories: [
       { name: "Beach", image: "/images/new_slide3.jpg" },
       { name: "Cities", image: "/images/new_slide1.jpg" },

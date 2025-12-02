@@ -9,6 +9,7 @@ import { TourRedirectButton } from "@/components/tour-redirect-button"
 import { TourPackage } from "@/types/index"
 import { slugify } from "@/utils/slugify"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 interface TourPackagesSectionProps {
   title: string
@@ -26,6 +27,7 @@ export function TourPackagesSection({
   fallbackPackages
 }: TourPackagesSectionProps) {
   const [selectedTourId, setSelectedTourId] = useState<string | number | null>(null)
+  const router = useRouter()
 
   const renderPackageCards = () => {
     if (isLoading) {
@@ -49,8 +51,26 @@ export function TourPackagesSection({
         console.warn(`Skipping tour package with missing ID or title`, pkg)
         return null
       }
+      const href = `/tour?id=${encodeURIComponent(pkg.id.toString())}${
+        pkg.title ? `&title=${encodeURIComponent(slugify(pkg.title))}` : ''
+      }`
       return (
-           <Card key={pkg.id} className="overflow-hidden bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
+           <Card
+            key={pkg.id}
+            className="overflow-hidden bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow h-full flex flex-col cursor-pointer"
+            role="link"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                router.push(href)
+              }
+            }}
+            onClick={(e) => {
+              const target = e.target as HTMLElement
+              if (target && (target.closest('a') || target.closest('button'))) return
+              router.push(href)
+            }}
+          >
           <div className="relative h-60 sm:h-60 md:h-40 lg:h-72">
             <Image 
               src={pkg.image1 || "/images/default-tour.jpg"} 

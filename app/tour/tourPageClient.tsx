@@ -178,27 +178,38 @@ export default function TourPageClient() {
               exclusion={tourPackage.exclusions ?? []}
             />
 
-            <div className="mb-6">
+            <div className="mb-6 border border-red-600 p-4 rounded-lg">
               <h3 className="text-lg font-bold text-red-600 mb-3">KNOW BEFORE YOU GO</h3>
               {tourPackage.final_info ? (
-                <ol className="list-decimal pl-5 space-y-2 text-sm marker:text-red-600">
-                  {tourPackage.final_info
-                    .split(/<br\s*\/>|\r?\n/g)
-                    .map((s) => s.trim())
-                    .filter(Boolean)
-                    .map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="text-black"
-                        dangerouslySetInnerHTML={{ __html: item }}
-                      />
-                    ))}
-                </ol>
+                (() => {
+                  const text = tourPackage.final_info
+                    .replace(/<\/?.*?>/g, " ")
+                    .replace(/\s+/g, " ")
+                    .trim();
+                  const sentences = text
+                    ? text
+                        .split(/(?<=[.!?])\s+(?=[A-Z])/)
+                        .map((s) => s.trim())
+                        .filter(Boolean)
+                    : [];
+                  return (
+                    <ul className="list-disc pl-5 space-y-2 text-sm marker:text-red-600">
+                      {sentences.map((s, idx) => {
+                        const withDot = /[.!?]$/.test(s) ? s : s + ".";
+                        return (
+                          <li key={idx} className="text-black">
+                            {withDot}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  );
+                })()
               ) : (
-                <ol className="list-decimal pl-5 space-y-2 text-sm text-red-600">
+                <ul className="list-disc pl-5 space-y-2 text-sm text-red-600">
                   <li>Check visa requirements well in advance of your travel date.</li>
                   <li>Local currency is recommended for small purchases and tips.</li>
-                </ol>
+                </ul>
               )}
             </div>
             <PolicyAccordion />

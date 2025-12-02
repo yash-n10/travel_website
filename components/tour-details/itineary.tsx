@@ -107,7 +107,7 @@ export function Itinerary({ tourId }: ItineraryProps) {
                 </CollapsibleTrigger>
                 <CollapsibleContent className="p-3 bg-gray-50 border border-red-600 border-t-0 rounded-2xl text-sm">
                   <div
-                    className="text-gray-700 leading-relaxed space-y-2 [&_ul]:list-disc [&_ul]:pl-5 [&_li::marker]:text-black"
+                    className="text-gray-700 leading-relaxed space-y-2 [&_ul]:list-disc [&_ul]:pl-5 [&_li::marker]:text-red-600"
                     dangerouslySetInnerHTML={{ __html: day.content || "<p>No details available.</p>" }}
                   />
                 </CollapsibleContent>
