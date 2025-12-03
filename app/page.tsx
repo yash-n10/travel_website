@@ -52,7 +52,7 @@ const heroSlides: HeroSlide[] = [
     ],
   },
   {
-    image: "/images/varanasi1.jpg",
+    image: "/images/q2_final.jpg",
     categories: [
       { name: "Cities", image: "/images/new_slide2.jpg" },
       { name: "Heritage", image: "/images/new_slide3.jpg" },

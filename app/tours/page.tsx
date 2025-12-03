@@ -36,6 +36,7 @@ type Tour = {
 export default function ToursPage() {
   const searchParams = useSearchParams()
   const countryParam = searchParams.get("country")?.toLowerCase()
+  const categoryParam = searchParams.get("category")?.toLowerCase()
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [tours, setTours] = useState<Tour[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -69,6 +70,15 @@ export default function ToursPage() {
     { id: "culture", name: "Culture" },
     { id: "adventure", name: "Adventure" },
   ]
+
+  // Initialize category from query string if provided and valid
+  useEffect(() => {
+    if (!categoryParam) return
+    const validIds = categories.map((c) => c.id)
+    if (validIds.includes(categoryParam)) {
+      setSelectedCategory(categoryParam)
+    }
+  }, [categoryParam])
 
   useEffect(() => {
     const loadTours = async () => {
@@ -208,7 +218,7 @@ export default function ToursPage() {
                       <Star
                         key={i}
                         className={`w-4 h-4 ${
-                          i < Math.floor(tour.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
+                          i < Math.floor(tour.rating) ? "text-yellow-400 fill-current" : "text-gray-3 00"
                         }`}
                       />
                     ))}

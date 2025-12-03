@@ -7,10 +7,10 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Go Samyati Travel',
-    template: '%s | Go Samyati Travel'
+    default: 'GoSamyati – Handpicked Destinations, Personalized Experiences',
+    template: '%s | GoSamyati'
   },
-  description: 'Your premier travel agency for unforgettable journeys to exotic destinations worldwide',
+  description: 'Book a holiday, specially curated for you. Discover handpicked destinations, personalized experiences, and stress-free planning—all tailored to your taste.',
   keywords: ['travel', 'vacation', 'tour packages', 'holiday', 'adventure travel'],
   authors: [{ name: 'Go Samyati', url: 'https://gosamyati.com' }],
   creator: 'Go Samyati Travel',
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Go Samyati Travel',
-    description: 'Your premier travel agency for unforgettable journeys',
+    title: 'GoSamyati – Handpicked Destinations, Personalized Experiences',
+    description: 'Book a holiday, specially curated for you. Discover handpicked destinations, personalized experiences, and stress-free planning—all tailored to your taste.',
     url: 'https://gosamyati.com',
     siteName: 'Go Samyati Travel',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/logo.png',
         width: 1200,
         height: 630,
       },
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Go Samyati Travel',
-    description: 'Your premier travel agency for unforgettable journeys',
-    images: ['/images/og-image.jpg'],
+    title: 'GoSamyati – Handpicked Destinations, Personalized Experiences',
+    description: 'Book a holiday, specially curated for you. Discover handpicked destinations, personalized experiences, and stress-free planning—all tailored to your taste.',
+    images: ['/logo.png'],
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
   manifest: '/site.webmanifest',
 }
