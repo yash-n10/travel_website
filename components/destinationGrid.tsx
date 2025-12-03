@@ -16,7 +16,7 @@ export function DestinationGrid() {
         <div className="grid grid-cols-1 gap-4 md:hidden">
           <Link href={`/tours?category=heritage`}>
             <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
-              <Image src="/images/go_gateaway1.jpeg" alt="Karnataka " fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+              <Image src="/images/q1_final.jpg" alt="Karnataka " fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
                 {/* <h3 className="text-2xl font-semibold text-white">Karnataka</h3> */}
@@ -25,7 +25,7 @@ export function DestinationGrid() {
           </Link>
           <Link href={`/tours?category=heritage`}>
             <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
-              <Image src="/images/1234.jpg" alt="Andaman" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+              <Image src="/images/p11.jpg" alt="Andaman" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
                 {/* <h3 className="text-2xl font-semibold text-white">Andaman</h3> */}
@@ -34,7 +34,7 @@ export function DestinationGrid() {
           </Link>
           <Link href={`/tours?country=Kerala`}>
             <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
-              <Image src="/images/go_gateaway3.jpeg" alt="Kerala" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+              <Image src="/images/q4_final.jpeg" alt="Kerala" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
                 {/* <h3 className="text-2xl font-semibold text-white">Kerala</h3> */}
@@ -43,7 +43,7 @@ export function DestinationGrid() {
           </Link>
           <Link href={`/tours?category=heritage`}>
             <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
-              <Image src="/images/go_gateaway4.jpeg" alt="Himachal Pradesh" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+              <Image src="/images/Mumbai.jpg" alt="Himachal Pradesh" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
                 {/* <h3 className="text-2xl font-semibold text-white">Himachal Pradesh</h3> */}
@@ -52,7 +52,7 @@ export function DestinationGrid() {
           </Link>
           <Link href={`/tours?country=Ladakh`}>
             <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
-              <Image src="/images/go_gateaway5.jpeg" alt="Ladakh" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+              <Image src="/images/21_1.jpg" alt="Ladakh" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
                 {/* <h3 className="text-2xl font-semibold text-white">Ladakh</h3> */}
@@ -61,7 +61,7 @@ export function DestinationGrid() {
           </Link>
           <Link href={`/tours?category=heritage`}>
             <Card className="relative overflow-hidden rounded-lg group cursor-pointer aspect-[16/9]">
-              <Image src="/images/go_gateaway6.jpeg" alt="Uttarakhand" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+              <Image src="/images/q3_final.png" alt="Uttarakhand" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"/>
               <div className="absolute bottom-6 left-6">
                 {/* <h3 className="text-2xl font-semibold text-white">Uttarakhand</h3> */}
