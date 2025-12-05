@@ -29,6 +29,7 @@ export const BookNowButton: React.FC<BookNowButtonProps> = ({
   });
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const today = new Date().toISOString().split('T')[0];
 
   useEffect(() => {}, []);
   console.log('User details:', userDetails);
@@ -174,6 +175,15 @@ export const BookNowButton: React.FC<BookNowButtonProps> = ({
 
   // after collecting details, kick off payment then close dialog
   const proceed = () => {
+    // Guard against empty or past dates
+    if (!userDetails.travelDate) {
+      toast.error('Please select a travel date.');
+      return;
+    }
+    if (userDetails.travelDate < today) {
+      toast.error('Travel date cannot be in the past.');
+      return;
+    }
     handlePayment();
   };
 
@@ -227,6 +237,7 @@ export const BookNowButton: React.FC<BookNowButtonProps> = ({
                 placeholder="Travel Date"
                 value={userDetails.travelDate}
                 onChange={handleInputChange}
+                min={today}
                 className="w-full border rounded px-3 py-2"
               />
               {/* No of person */}

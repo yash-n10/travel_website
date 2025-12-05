@@ -80,7 +80,7 @@ export function Footer() {
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm xl:text-base">
           <div className="text-center sm:text-left text-xl">
             <h4 className="font-semibold mb-1">Call Us</h4>
-            <div className="flex flex-wrap gap-1">
+            <div className="">
             {settings?.phone1 && <p className="break-all">{settings.phone1}</p>} 
             {settings?.phone2 && <p className="break-all">{settings.phone2}</p>}
             </div>

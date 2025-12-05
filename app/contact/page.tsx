@@ -45,6 +45,18 @@ export default function ContactPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
+  // Date helpers and constraints
+  const today = new Date().toISOString().split('T')[0]
+  const addDays = (dateStr: string, days: number) => {
+    const d = new Date(dateStr)
+    if (Number.isNaN(d.getTime())) return dateStr
+    d.setDate(d.getDate() + days)
+    return d.toISOString().split('T')[0]
+  }
+  // Email validation helper
+  const emailRegex = /^\S+@\S+\.\S+$/
+  const isEmailValid = !formData.email || emailRegex.test(formData.email)
+
   const faqs = [
     {
       question: "How do I make a booking or reservation?",
@@ -102,10 +114,25 @@ export default function ContactPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
+    setFormData((prev) => {
+      const next = { ...prev, [name]: value }
+
+      // Keep date range valid in-state
+      if (name === 'departureDate') {
+        // If returnDate exists and is not strictly after new departure, clear it
+        if (next.returnDate && next.returnDate <= value) {
+          next.returnDate = ''
+        }
+      }
+      if (name === 'returnDate') {
+        // If selecting a return before/equal to departure, auto-correct to next day
+        if (next.departureDate && value <= next.departureDate) {
+          next.returnDate = addDays(next.departureDate, 1)
+        }
+      }
+
+      return next
+    })
     if (submitError) setSubmitError(null)
   }
 
@@ -115,13 +142,28 @@ export default function ContactPage() {
     setSubmitError(null)
 
     try {
+      // Block submit on invalid email without setting global error
+      if (!isEmailValid) {
+        setIsSubmitting(false)
+        return
+      }
+      // Date validations
+      const dep = formData.departureDate
+      const ret = formData.returnDate
+      if (dep && dep < today) {
+        throw new Error('Departure date cannot be in the past')
+      }
+      if (ret && ret < today) {
+        throw new Error('Return date cannot be in the past')
+      }
+      if (dep && ret && ret <= dep) {
+        throw new Error('Return date must be after the departure date')
+      }
+
       if (!formData.firstName || !formData.email) {
         throw new Error('First Name and Email are required fields')
       }
 
-      if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-        throw new Error('Please enter a valid email address')
-      }
 
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -229,6 +271,9 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-gray-900">Email</h3>
                       {settings?.email && (
                         <p className="text-gray-600">{settings.email}</p>
+                      )}
+                      {settings?.email && !/^\S+@\S+\.\S+$/.test(String(settings.email)) && (
+                        <p className="text-red-500 text-sm mt-1">Invalid email format</p>
                       )}
                     </div>
                   </div>
@@ -347,9 +392,12 @@ export default function ContactPage() {
                           onChange={handleInputChange}
                           required
                           disabled={isSubmitting}
-                          className={inputClasses(formData.email)}
+                          className={`${inputClasses(formData.email)} ${formData.email && !isEmailValid ? 'border-red-500 focus:ring-2 focus:ring-red-500 focus:border-red-500' : ''}`}
                           placeholder="Enter your email address"
                         />
+                        {formData.email && !isEmailValid && (
+                          <p className="text-red-500 text-sm mt-1">Please enter a valid email address</p>
+                        )}
                       </div>
 
                       <div>
@@ -396,6 +444,7 @@ export default function ContactPage() {
                             value={formData.departureDate}
                             onChange={handleInputChange}
                             disabled={isSubmitting}
+                            min={today}
                             className={inputClasses(formData.departureDate)}
                           />
                         </div>
@@ -411,21 +460,22 @@ export default function ContactPage() {
                             value={formData.returnDate}
                             onChange={handleInputChange}
                             disabled={isSubmitting}
+                            min={formData.departureDate ? addDays(formData.departureDate, 1) : today}
                             className={inputClasses(formData.returnDate)}
                           />
                         </div>
                       </div>
 
-                      {submitError && (
+                      {/* {submitError && (
                         <div className="text-red-500 text-sm">
                           {submitError}
                         </div>
-                      )}
+                      )} */}
 
                       <Button 
                         type="submit" 
                         className="w-full bg-red-600 hover:bg-red-700"
-                        disabled={isSubmitting}
+                        disabled={isSubmitting || !isEmailValid}
                       >
                         {isSubmitting ? (
                           <span className="flex items-center justify-center">
