@@ -507,7 +507,7 @@ export default function ContactPage() {
               <div className="relative h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.421121374609!2d72.82696131475552!3d19.171346252014584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7c21308c3f3%3A0xdde4b20de0f17ac5!2s123%20Travel%20Street%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1691234567890!5m2!1sen!2sin"
+                  src="https://www.google.com/maps?q=Circle%2C%20No.%203493%2C%20Outer%20Ring%20Rd%2C%20near%20Bagmane%20Constellation%20Business%20Park%2C%20next%20to%20Rainbow%20Children%27s%20Hospital%2C%20Ferns%20City%2C%20Doddanekundi%2C%20Doddanekkundi%2C%20Bengaluru%2C%20Karnataka%20560037&z=15&output=embed"
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"

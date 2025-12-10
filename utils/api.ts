@@ -83,6 +83,7 @@ function processTourPackage(item: any): TourPackage {
     image4: processOptionalImageUrl(item.image4),
     image5: processOptionalImageUrl(item.image5),
     category: ensureString(item.category, 'Other'),
+    national: optionalString(item.national),
     country: optionalString(item.country),
     destination: optionalString(item.destination),
     highlights: processHighlights(item.highlights),

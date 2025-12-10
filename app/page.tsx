@@ -160,7 +160,7 @@ export default function GoSamyatiTravel() {
       
       <TourPackagesSection 
         title="VISIT THE HEART OF INDIA" 
-        packages={packages.slice(4, 8)}
+        packages={packages.filter(p => p.national === 'national')}
         isLoading={isLoading}
         error={error}
         fallbackPackages={[]}

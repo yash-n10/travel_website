@@ -14,6 +14,7 @@ export type TourPackage = {
   image4?: string;
   image5?: string;
   category: string;
+  national?: string;
   country?: string;
   destination?: string;
   highlights: string[];
