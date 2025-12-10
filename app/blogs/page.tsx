@@ -404,9 +404,10 @@ export default function BlogsPage() {
           />
         </div>
         <CardContent className="p-6">
-          <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
+          <div className="flex flex-col items-start gap-2 text-sm text-gray-600 mb-3">
             <Badge variant="outline">{blog.category}</Badge>
-            <div className="flex items-center">
+            <div className="w-fit flex items-center gap-4" >
+            <div className=" flex items-center">
               <Calendar className="w-4 h-4 mr-1" />
               {/* <span>{blog.date}</span> */}
               <span>  {new Date(blog.date).toLocaleDateString("en-US", {
@@ -418,6 +419,7 @@ export default function BlogsPage() {
             <div className="flex items-center">
               <Clock className="w-4 h-4 mr-1" />
               <span>{blog.readTime}</span>
+            </div>
             </div>
           </div>
 
