@@ -152,7 +152,7 @@ export default function GoSamyatiTravel() {
       
       <TourPackagesSection 
         title="GOSAMYATI SPECIALS" 
-        packages={packages.slice(0, 4)}
+        packages={packages.filter(p => p.country === 'Kerala').slice(0, 4)}
         isLoading={isLoading}
         error={error}
         fallbackPackages={[]}
